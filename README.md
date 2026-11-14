@@ -16,7 +16,9 @@ Personal website of CA Satvik Shah — Chartered Accountant, entrepreneur and ad
 |---|---|
 | `index.html` | The whole website: all pages, styles and scripts |
 | `img/` | Photographs (web-sized, plus high-resolution `press-*` versions for the press kit) |
-| `favicon.svg` | Browser tab icon |
+| `favicon.svg`, `apple-touch-icon.png` | Browser tab and iPhone home-screen icons |
+| `img/og-share.jpg` | Image shown when the site link is shared on WhatsApp, LinkedIn etc. |
+| `404.html` | "Page not found" page |
 | `robots.txt`, `sitemap.xml` | Search engine files |
 | `netlify.toml` | Netlify settings: security headers and redirect from the Netlify address to satvikshah.com |
 
