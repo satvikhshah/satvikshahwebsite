@@ -1,0 +1,1760 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#142238">
+<title>Satvik Shah</title>
+<meta name="description" content="CA Satvik Shah, Chartered Accountant and entrepreneur in Vadodara, India. Finance, business systems, risk, real estate advisory and the ventures he is building.">
+<meta property="og:title" content="Satvik Shah · Beyond Numbers">
+<meta property="og:description" content="Building systems, businesses and meaningful connections. Chartered Accountant, entrepreneur and advisor, Vadodara.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://www.satvikshah.com/">
+<meta property="og:image" content="https://www.satvikshah.com/img/hero.jpg">
+<link rel="canonical" href="https://www.satvikshah.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout concept: an accountant's ledger sheet. Every section sits on a ruled page with a folio margin
+   (L.F. column) on the left, a double gold "totals" rule under key headings, blueprint grid in the hero. */
+:root{
+  --paper:#F7F5F0; --paper-2:#EFEBE3; --card:#FBFAF7;
+  --ink:#142238; --on-ink:#F7F5F0;
+  --text:#2C3541; --muted:#5A626C;
+  --gold:#B3945A; --gold-ink:#7A5E2C;
+  --stone:#DDD8D0; --rule:#CFC7BA; --grid:rgba(20,34,56,.055);
+  --ok:#2F6B4F; --emerging:#8A5A12; --past:#6A707A;
+  --note-bg:#FFF1CC; --note-fg:#5E450C;
+  --f-display:"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --f-body:"Instrument Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --maxw:1240px; --gut:clamp(16px,4vw,48px); --folio:76px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E1829; --paper-2:#13213A; --card:#122038;
+  --ink:#EEE7D7; --on-ink:#0E1829;
+  --text:#D6D1C7; --muted:#A2A9B3;
+  --gold:#C9A96A; --gold-ink:#D9BC80;
+  --stone:#25344D; --rule:#33445F; --grid:rgba(201,169,106,.07);
+  --ok:#7BC4A0; --emerging:#E2B565; --past:#9AA1AB;
+  --note-bg:#3B3016; --note-fg:#F3D891; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --paper:#0E1829; --paper-2:#13213A; --card:#122038;
+  --ink:#EEE7D7; --on-ink:#0E1829;
+  --text:#D6D1C7; --muted:#A2A9B3;
+  --gold:#C9A96A; --gold-ink:#D9BC80;
+  --stone:#25344D; --rule:#33445F; --grid:rgba(201,169,106,.07);
+  --ok:#7BC4A0; --emerging:#E2B565; --past:#9AA1AB;
+  --note-bg:#3B3016; --note-fg:#F3D891; color-scheme:dark;}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+h1[tabindex="-1"]:focus{outline:none}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--text);font-family:var(--f-body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--f-display);color:var(--ink);font-weight:400;margin:0;text-wrap:balance;font-optical-sizing:auto}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);font-weight:500}
+.muted{color:var(--muted)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--on-ink);padding:8px 12px;z-index:100}
+.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:3px double var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
+.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.1;margin-right:auto}
+.brand b{font-family:var(--f-display);font-weight:500;font-size:1.3rem;color:var(--ink);letter-spacing:.01em}
+.brand span{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.16em;color:var(--gold-ink);text-transform:uppercase;margin-top:3px}
+.nav{display:flex;gap:2px;align-items:center}
+.nav a{text-decoration:none;font-size:.9rem;font-weight:500;padding:8px 10px;color:var(--text);border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--stone)}
+.nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--gold)}
+.nav .nav-cta{margin-left:8px;background:var(--ink);color:var(--on-ink);border:0;padding:8px 14px}
+.nav .nav-cta:hover{color:var(--on-ink);opacity:.9}
+.nav .nav-cta[aria-current="page"]{color:var(--on-ink)}
+.top .socials{display:flex;gap:4px}
+.menu-btn{display:none;background:none;border:1px solid var(--rule);color:var(--ink);font:500 .8rem var(--f-mono);letter-spacing:.1em;padding:8px 12px;cursor:pointer}
+@media (max-width:1080px){.top .socials{display:none}}
+@media (max-width:900px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:var(--paper);border-bottom:3px double var(--rule);padding:8px var(--gut) 16px}
+  .nav.open{display:flex}
+  .nav a{padding:12px 4px;border-bottom:1px solid var(--stone)}
+  .nav .nav-cta{margin:12px 0 0;text-align:center}
+}
+
+/* social keys */
+.soc{display:inline-grid;place-items:center;min-width:34px;height:34px;padding:0 6px;border:1px solid var(--rule);font:600 .74rem var(--f-mono);color:var(--ink);text-decoration:none;letter-spacing:.02em;background:var(--card)}
+a.soc:hover{border-color:var(--gold);color:var(--gold-ink)}
+.soc.missing{border-style:dashed;color:var(--note-fg);background:var(--note-bg);cursor:help}
+body.notes-off .soc.missing{display:none}
+
+/* ---------- Ledger sheet ---------- */
+.page[hidden]{display:none}
+.sec{padding-block:clamp(56px,8vw,104px);border-bottom:1px solid var(--stone)}
+.sheet{display:grid;grid-template-columns:var(--folio) minmax(0,1fr)}
+.folio{border-right:3px double var(--gold);padding-right:14px;text-align:right;font-family:var(--f-mono);color:var(--muted);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.folio b{display:block;font-size:1.45rem;color:var(--gold-ink);font-weight:500;letter-spacing:0;margin-top:4px}
+.sheet>.body{padding-left:clamp(20px,3.5vw,48px);min-width:0}
+@media (max-width:700px){
+  .sheet{grid-template-columns:minmax(0,1fr)}
+  .folio{border-right:0;text-align:left;padding:0 0 14px;display:flex;gap:10px;align-items:baseline}
+  .folio b{display:inline;font-size:1rem;margin:0}
+  .sheet>.body{padding-left:0}
+}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px);max-width:820px}
+.sec-head h2{font-size:clamp(2rem,4.4vw,3.3rem);line-height:1.05;letter-spacing:-.015em}
+.sec-head p{color:var(--muted);font-size:1.08rem;max-width:62ch}
+.total{display:inline;padding-bottom:4px;border-bottom:3px double var(--gold);background:linear-gradient(var(--gold),var(--gold)) no-repeat 0 100%/0 0}
+.lede{font-size:clamp(1.12rem,1.6vw,1.28rem);line-height:1.6;color:var(--text);max-width:62ch}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 .95rem var(--f-body);padding:13px 22px;text-decoration:none;border:1px solid var(--ink);cursor:pointer;transition:transform .15s ease,background .15s ease,color .15s}
+.btn.primary{background:var(--ink);color:var(--on-ink)}
+.btn.primary:hover{transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--on-ink)}
+.btn.small{padding:8px 14px;font-size:.85rem}
+.link{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
+.link:hover{color:var(--gold-ink)}
+.arrow{font-family:var(--f-mono)}
+
+/* editor placeholders */
+.ph{background:var(--note-bg);color:var(--note-fg);border-bottom:1px dashed currentColor;padding:0 .25em;font-style:normal}
+.note{display:block;background:var(--note-bg);color:var(--note-fg);font:500 .8rem/1.5 var(--f-mono);padding:10px 12px;border-left:3px solid var(--gold);margin-top:14px}
+.note::before{content:"Editor note · ";font-weight:600}
+body.notes-off .ph{background:none;color:inherit;border:0;padding:0}
+body.notes-off .note,body.notes-off .ph-only{display:none}
+.notes-toggle{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--note-bg);color:var(--note-fg);border:1px solid var(--gold);font:600 .74rem var(--f-mono);letter-spacing:.06em;padding:9px 12px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+body.notes-off .notes-toggle{background:var(--card);color:var(--muted)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;border-bottom:3px double var(--rule);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;background-position:-1px -1px;overflow:hidden}
+.hero .wrap{padding-block:clamp(40px,7vw,88px) 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.75fr);gap:clamp(28px,5vw,72px);align-items:end}
+@media (max-width:860px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:22px}
+.hero h1{font-size:clamp(3.4rem,10.5vw,8.6rem);line-height:.88;letter-spacing:-.035em;font-weight:350;font-variation-settings:"opsz" 144}
+.hero h1 .l2{display:block;font-style:italic;font-weight:300;color:var(--gold-ink);padding-left:.45em}
+.hero .thesis{font-family:var(--f-display);font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.25;color:var(--ink);margin:28px 0 18px;max-width:30ch;font-weight:400}
+.hero .thesis em{font-style:normal;border-bottom:3px double var(--gold)}
+.hero .support{max-width:58ch;color:var(--text);margin-bottom:28px}
+.portrait{position:relative;border:1px solid var(--ink);background:var(--card);padding:10px;max-width:380px;justify-self:end;width:100%}
+@media (max-width:860px){.portrait{justify-self:start;max-width:260px}}
+.portrait .frame{aspect-ratio:4/5;max-width:100%;background:linear-gradient(160deg,var(--paper-2),var(--stone));display:grid;place-items:center;overflow:hidden;position:relative}
+.portrait .frame img{width:100%;height:100%;object-fit:cover;display:block}
+.monogram{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(5rem,12vw,8.5rem);color:var(--ink);opacity:.9;letter-spacing:-.06em}
+.monogram small{display:block;text-align:center;font:500 .66rem var(--f-mono);letter-spacing:.2em;font-style:normal;color:var(--gold-ink);margin-top:-6px}
+.portrait figcaption{display:flex;justify-content:space-between;gap:8px;font:500 .66rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:9px}
+.corner{position:absolute;width:14px;height:14px;border:2px solid var(--gold)}
+.corner.tl{left:-6px;top:-6px;border-right:0;border-bottom:0}.corner.br{right:-6px;bottom:-6px;border-left:0;border-top:0}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--ink);border-bottom:3px double var(--ink);background:color-mix(in srgb,var(--paper) 80%,transparent)}
+.stat{padding:20px 18px 18px;border-left:1px solid var(--rule)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat .n{font-family:var(--f-mono);font-size:clamp(2rem,4.2vw,3.2rem);font-weight:500;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.stat .n sup{font-size:.45em;color:var(--gold-ink);vertical-align:top;margin-left:2px}
+.stat .k{font:500 .7rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+@media (max-width:700px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(3){border-left:0;padding-left:0}.stat:nth-child(n+3){border-top:1px solid var(--rule)}}
+.ticker{overflow:hidden;border-bottom:1px solid var(--stone);padding-block:14px;margin-top:0}
+.ticker .track{display:flex;gap:42px;width:max-content;animation:tick 48s linear infinite;font:500 .78rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ticker .track span::before{content:"§ ";color:var(--gold)}
+.ticker:hover .track{animation-play-state:paused}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .track{animation:none;flex-wrap:wrap;width:auto;gap:10px 28px}}
+
+/* ---------- Intro ---------- */
+.intro-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:860px){.intro-grid{grid-template-columns:minmax(0,1fr)}}
+.dropcap::first-letter{font-family:var(--f-display);float:left;font-size:4.4em;line-height:.82;padding:6px 10px 0 0;color:var(--gold-ink)}
+.ledger-aside{border-top:1px solid var(--ink);font-size:.95rem}
+.ledger-aside .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:11px 0;border-bottom:1px solid var(--stone)}
+.ledger-aside .row span:last-child{font-family:var(--f-mono);color:var(--ink);font-variant-numeric:tabular-nums;text-align:right}
+.ledger-aside .row.tot{border-bottom:3px double var(--ink);font-weight:600}
+
+/* ---------- Account heads (dimensions) ---------- */
+.accounts{border-top:1px solid var(--ink)}
+.acct{display:grid;grid-template-columns:70px minmax(0,1.1fr) minmax(0,1.4fr) 40px;gap:20px;align-items:center;padding:22px 8px;border-bottom:1px solid var(--stone);text-decoration:none;color:inherit;transition:background .2s ease;position:relative;cursor:pointer;background:none;border-left:0;border-right:0;border-top:0;width:100%;text-align:left;font:inherit}
+.acct:hover,.acct:focus-visible{background:var(--paper-2)}
+.acct:hover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold)}
+.acct>*{min-width:0}
+.acct .code{font:500 .8rem var(--f-mono);color:var(--gold-ink);letter-spacing:.06em}
+.acct h3{font-size:clamp(1.25rem,2vw,1.55rem);line-height:1.2}
+.acct .d{color:var(--muted);font-size:.96rem}
+.acct .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.acct .go{font:500 1.1rem var(--f-mono);color:var(--ink);text-align:right;transition:transform .2s}
+.acct:hover .go{transform:translateX(4px)}
+@media (max-width:760px){.acct{grid-template-columns:52px minmax(0,1fr) 24px;row-gap:8px}.acct .code{grid-column:1;grid-row:1}.acct>div{grid-column:2;grid-row:1}.acct .d{grid-column:2;grid-row:2}.acct .go{grid-column:3;grid-row:1}}
+.tag{font:500 .68rem var(--f-mono);letter-spacing:.06em;padding:3px 8px;border:1px solid var(--rule);color:var(--text);background:var(--card);white-space:nowrap}
+
+/* ---------- Map ---------- */
+.map-shell{border:1px solid var(--rule);background:var(--card);position:relative}
+.map-bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--rule)}
+.map-legend{display:flex;flex-wrap:wrap;gap:14px;font:500 .7rem var(--f-mono);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.map-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.map-scroll{overflow-x:auto}
+.map-scroll svg{display:block;width:100%;min-width:640px;height:auto}
+.map-svg text{font-family:var(--f-body);fill:var(--text)}
+.map-svg .lbl{font-size:13px}
+.map-svg .dimlbl{font:600 11px var(--f-mono);letter-spacing:.06em;fill:var(--gold-ink);text-transform:uppercase}
+.map-svg .edge{stroke:var(--rule);stroke-width:1;fill:none;transition:stroke .2s,stroke-width .2s}
+.map-svg .edge.core{stroke:var(--gold);stroke-width:1.4}
+.map-svg .edge.hi{stroke:var(--gold);stroke-width:2}
+.map-svg .node{cursor:pointer;outline:none}
+.map-svg .node circle,.map-svg .node rect{transition:transform .2s}
+.map-svg .node:hover .lbl,.map-svg .node:focus .lbl{fill:var(--ink);font-weight:600}
+.map-svg .node:focus-visible circle,.map-svg .node:focus-visible rect{stroke:var(--gold);stroke-width:3}
+.map-svg .dim-node rect{fill:var(--paper);stroke:var(--gold-ink);stroke-width:1.5}
+.map-svg .center rect{fill:var(--ink)}
+.map-svg .center text{fill:var(--on-ink);font-family:var(--f-display);font-size:22px}
+.map-svg .ring{fill:none;stroke:var(--stone);stroke-dasharray:3 5}
+.map-svg .dim{opacity:.18;transition:opacity .2s}
+.map-note{font:500 .72rem var(--f-mono);color:var(--muted);padding:10px 16px;border-top:1px solid var(--rule)}
+
+/* ---------- Ways to work ---------- */
+.ways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink)}
+.way{padding:28px 28px 30px 0;border-bottom:1px solid var(--stone);display:grid;gap:10px;align-content:start}
+.way:nth-child(2n){padding-left:28px;padding-right:0;border-left:1px solid var(--stone)}
+.way .no{font:500 .74rem var(--f-mono);color:var(--gold-ink);letter-spacing:.1em}
+.way h3{font-size:1.55rem}
+.way ul{margin:2px 0 6px;padding-left:18px;color:var(--text)}
+.way li{margin:3px 0}
+.via{font:500 .72rem var(--f-mono);color:var(--muted);letter-spacing:.04em}
+@media (max-width:760px){.ways{grid-template-columns:minmax(0,1fr)}.way,.way:nth-child(2n){padding:24px 0;border-left:0}}
+
+/* ---------- Principles ---------- */
+.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--stone)}
+.pr{padding:28px 24px 22px;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone);display:flex;flex-direction:column;gap:12px;min-width:0}
+.pr .no{font:500 .7rem var(--f-mono);color:var(--gold-ink);letter-spacing:.12em}
+.pr q{font-family:var(--f-display);font-size:1.5rem;line-height:1.2;color:var(--ink);quotes:none;font-style:italic;font-weight:350}
+.pr p{color:var(--muted);font-size:.95rem;flex:1}
+.copy-btn{align-self:flex-start;background:none;border:0;padding:4px 0;font:500 .7rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);cursor:pointer}
+.copy-btn:hover{color:var(--gold-ink)}
+@media (max-width:960px){.principles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.principles{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Articles register ---------- */
+.register{border-top:1px solid var(--ink)}
+.entry{display:grid;grid-template-columns:120px minmax(0,1fr) 110px;gap:22px;padding:24px 4px;border-bottom:1px solid var(--stone);text-decoration:none;color:inherit;align-items:start}
+a.entry:hover h3{color:var(--gold-ink)}
+.entry .when{font:500 .74rem var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;padding-top:6px}
+.entry h3{font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.2;transition:color .2s}
+.entry .sum{color:var(--muted);margin-top:8px;max-width:64ch;font-size:.98rem}
+.entry .cat{font:500 .7rem var(--f-mono);color:var(--gold-ink);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;display:block}
+.entry .rt{font:500 .74rem var(--f-mono);color:var(--muted);text-align:right;padding-top:6px}
+.status{display:inline-block;font:600 .64rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border:1px solid currentColor}
+.status.Active{color:var(--ok)}.status.Emerging{color:var(--emerging)}.status.Past{color:var(--past)}.status.Draft{color:var(--emerging)}.status.Outline{color:var(--past)}
+@media (max-width:700px){.entry{grid-template-columns:minmax(0,1fr)}.entry .rt{text-align:left;padding:0}.entry .when{padding:0}}
+
+/* ---------- Beyond teaser / exploring ---------- */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px)}
+@media (max-width:860px){.split{grid-template-columns:minmax(0,1fr)}}
+.interest-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink)}
+.interest-list div{padding:16px 12px 16px 0;border-bottom:1px solid var(--stone)}
+.interest-list b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.25rem;color:var(--ink)}
+.interest-list span{font-size:.9rem;color:var(--muted)}
+.explore{background:var(--ink);color:var(--on-ink);padding:clamp(24px,4vw,40px)}
+.explore h3{color:var(--on-ink);font-size:1.8rem}
+.explore .eyebrow{color:var(--gold)}
+.explore ol{list-style:none;margin:18px 0 0;padding:0;counter-reset:x}
+.explore li{counter-increment:x;display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:13px 0;border-top:1px solid color-mix(in srgb,var(--on-ink) 18%,transparent);font-size:.98rem}
+.explore li::before{content:"Q" counter(x);font:500 .74rem var(--f-mono);color:var(--gold);padding-top:4px}
+.explore .ph{color:var(--note-fg)}
+.explore small{display:block;font:500 .68rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:color-mix(in srgb,var(--on-ink) 65%,transparent);margin-top:16px}
+
+/* ---------- Feed ---------- */
+.feed{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--stone)}
+.feed-card{padding:22px 20px;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone);display:flex;flex-direction:column;gap:10px;min-width:0;background:var(--paper)}
+.feed-card .soc{align-self:flex-start}
+.feed-card h3{font-size:1.25rem}
+.feed-card p{font-size:.92rem;color:var(--muted);flex:1}
+.feed-card iframe{width:100%;border:0;min-height:420px;background:var(--card)}
+.feed-card .handle{font:500 .76rem var(--f-mono);color:var(--text);word-break:break-all}
+
+/* ---------- CTA band ---------- */
+.band{background:var(--ink);color:var(--on-ink);padding-block:clamp(64px,9vw,120px)}
+.band h2{color:var(--on-ink);font-size:clamp(2.1rem,5vw,4rem);line-height:1.05;max-width:20ch;font-weight:350}
+.band p{max-width:56ch;color:color-mix(in srgb,var(--on-ink) 78%,transparent);margin:20px 0 32px;font-size:1.1rem}
+.band .btn.primary{background:var(--gold);color:#14202F;border-color:var(--gold)}
+.band .btn.ghost{color:var(--on-ink);border-color:color-mix(in srgb,var(--on-ink) 50%,transparent)}
+.band .btn.ghost:hover{background:var(--on-ink);color:var(--ink)}
+.band .eyebrow{color:var(--gold)}
+
+/* ---------- Page header (inner pages) ---------- */
+.phead{padding-block:clamp(48px,7vw,96px) clamp(32px,5vw,56px);border-bottom:3px double var(--rule);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px}
+.phead h1{font-size:clamp(2.8rem,7.5vw,6rem);line-height:.95;letter-spacing:-.03em;font-weight:350;margin:14px 0 20px}
+.phead h1 em{color:var(--gold-ink);font-weight:300}
+.phead .lede{color:var(--muted)}
+
+/* ---------- About ---------- */
+.about-top{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:860px){.about-top{grid-template-columns:minmax(0,1fr)}}
+.story{max-width:68ch}
+.story h3{font-size:1.65rem;margin:44px 0 12px;display:flex;gap:14px;align-items:baseline}
+.story h3 .mono{font-size:.75rem;color:var(--gold-ink);letter-spacing:.1em;flex:none}
+.story p{margin-bottom:14px}
+.story p:first-of-type{font-size:1.18rem}
+.pull{font-family:var(--f-display);font-style:italic;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.25;color:var(--ink);border-top:1px solid var(--ink);border-bottom:3px double var(--ink);padding:22px 0;margin:36px 0;font-weight:350}
+.bio-box{border:1px solid var(--rule);background:var(--card);padding:20px 22px;margin-bottom:18px}
+.bio-box header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+.bio-box p{font-size:.96rem}
+.table-scroll{overflow-x:auto;border-top:1px solid var(--ink)}
+table.journal{width:100%;border-collapse:collapse;min-width:640px;font-size:.96rem}
+.journal caption{text-align:left;font:500 .7rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 0 10px;caption-side:top}
+.journal th{font:600 .68rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:12px 10px;border-bottom:1px solid var(--ink);background:var(--paper-2)}
+.journal td{padding:14px 10px;border-bottom:1px solid var(--stone);vertical-align:top}
+.journal td:first-child{font-family:var(--f-mono);white-space:nowrap;color:var(--ink);font-variant-numeric:tabular-nums}
+.journal td.lf{font-family:var(--f-mono);color:var(--gold-ink);font-size:.82rem}
+.journal td .sub{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.journal tr:hover td{background:var(--paper-2)}
+.journal tfoot td{border-bottom:3px double var(--ink);font-weight:600}
+.cred{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--stone)}
+.cred div{padding:18px;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.cred b{font-family:var(--f-display);font-weight:400;font-size:1.5rem;color:var(--ink);display:block}
+.cred span{font-size:.88rem;color:var(--muted)}
+
+/* ---------- Work page ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:18px 26px;align-items:end;margin-bottom:22px}
+.filters label{display:grid;gap:6px;font:500 .68rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.filters select{font:500 .92rem var(--f-body);color:var(--ink);background:var(--card);border:1px solid var(--rule);padding:9px 12px;min-width:200px;max-width:100%}
+.view-toggle{display:inline-flex;border:1px solid var(--ink)}
+.view-toggle button{background:none;border:0;padding:9px 14px;font:600 .74rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);cursor:pointer}
+.view-toggle button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink)}
+.ventures{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+@media (max-width:400px){.ventures{grid-template-columns:minmax(0,1fr)}}
+.v{border:1px solid var(--rule);background:var(--card);display:flex;flex-direction:column;min-width:0}
+.v header{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;padding:18px 18px 14px;border-bottom:1px solid var(--stone)}
+.logo-slot{width:52px;height:52px;border:1px solid var(--ink);display:grid;place-items:center;font:500 1.1rem var(--f-display);color:var(--ink);background:var(--paper);font-style:italic}
+.v h3{font-size:1.18rem;line-height:1.2}
+.v .dom{font-size:.84rem;color:var(--muted);margin-top:4px}
+.v dl{margin:0;padding:6px 18px;flex:1}
+.v dl div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px dotted var(--stone);font-size:.9rem}
+.v dl div:last-child{border-bottom:0}
+.v dt{font:500 .66rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.v dd{margin:0;color:var(--text)}
+.v footer{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:12px 18px;border-top:1px solid var(--stone)}
+.v footer .vs{display:flex;gap:4px;flex-wrap:wrap}
+.v footer .soc{min-width:30px;height:30px;font-size:.68rem}
+.empty{padding:30px;border:1px dashed var(--rule);color:var(--muted);text-align:center}
+.listview{border-top:1px solid var(--ink)}
+.listview button{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--stone);padding:14px 4px;font:inherit;color:inherit;cursor:pointer}
+.listview button:hover{background:var(--paper-2)}
+
+dialog{border:1px solid var(--ink);background:var(--paper);color:var(--text);padding:0;max-width:min(640px,calc(100vw - 32px));width:100%}
+dialog::backdrop{background:rgba(10,16,28,.55)}
+.dlg-head{display:flex;justify-content:space-between;gap:14px;align-items:start;padding:22px 24px 16px;border-bottom:3px double var(--rule)}
+.dlg-head h3{font-size:1.6rem}
+.dlg-body{padding:18px 24px 24px;display:grid;gap:14px}
+.dlg-body .kv{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;font-size:.95rem;border-bottom:1px dotted var(--stone);padding-bottom:8px}
+.dlg-body .kv span:first-child{font:500 .68rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.x{background:none;border:1px solid var(--rule);width:36px;height:36px;font:500 1rem var(--f-mono);color:var(--ink);cursor:pointer;flex:none}
+
+/* ---------- Advisory ---------- */
+.practice{display:grid;grid-template-columns:var(--folio) minmax(0,1fr);border-top:1px solid var(--ink);padding-block:36px}
+.practice .pno{font:500 1.5rem var(--f-mono);color:var(--gold-ink)}
+.practice-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.practice h2{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;margin-bottom:12px}
+.practice h4{font:600 .7rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.practice ul{margin:0 0 18px;padding:0;list-style:none;border-top:1px solid var(--stone)}
+.practice li{padding:9px 0;border-bottom:1px solid var(--stone);display:grid;grid-template-columns:22px minmax(0,1fr);font-size:.97rem}
+.practice li::before{content:"›";color:var(--gold-ink);font-family:var(--f-mono)}
+.disc{font-size:.84rem;color:var(--muted);border-left:3px double var(--gold);padding:4px 0 4px 12px;margin-top:14px}
+@media (max-width:860px){.practice{grid-template-columns:minmax(0,1fr)}.practice-in{grid-template-columns:minmax(0,1fr)}.practice .pno{margin-bottom:6px}}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
+.steps div{padding:22px 18px 22px 0;border-bottom:1px solid var(--stone)}
+.steps div+div{padding-left:18px;border-left:1px solid var(--stone)}
+.steps b{font:500 .8rem var(--f-mono);color:var(--gold-ink);display:block;margin-bottom:8px}
+.steps h3{font-size:1.3rem;margin-bottom:6px}
+.steps p{font-size:.92rem;color:var(--muted)}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps div:nth-child(3){border-left:0;padding-left:0}}
+@media (max-width:520px){.steps{grid-template-columns:minmax(0,1fr)}.steps div+div{border-left:0;padding-left:0}}
+.sectors{display:flex;flex-wrap:wrap;gap:8px}
+.sectors .tag{font-size:.78rem;padding:7px 12px}
+
+/* ---------- Perspectives ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{background:var(--card);border:1px solid var(--rule);padding:8px 14px;font:500 .78rem var(--f-mono);letter-spacing:.04em;color:var(--text);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--stone)}
+.cats div{padding:18px;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.cats b{font-family:var(--f-display);font-weight:400;font-size:1.2rem;color:var(--ink);display:block;margin-bottom:4px}
+.cats span{font-size:.88rem;color:var(--muted)}
+.ideas{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.idea{border-top:3px double var(--gold);padding-top:16px;display:flex;flex-direction:column;gap:12px}
+.idea p{font-family:var(--f-display);font-size:1.35rem;line-height:1.3;color:var(--ink)}
+
+/* ---------- Article ---------- */
+.art-head{max-width:820px}
+.art-head h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1;letter-spacing:-.025em;margin:14px 0 18px}
+.art-meta{display:flex;flex-wrap:wrap;gap:8px 22px;font:500 .74rem var(--f-mono);letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-top:22px;padding-top:14px;border-top:1px solid var(--stone)}
+.art-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:clamp(24px,5vw,64px)}
+@media (max-width:900px){.art-layout{grid-template-columns:minmax(0,1fr)}}
+.toc{position:sticky;top:96px;align-self:start;border-top:1px solid var(--ink)}
+@media (max-width:900px){.toc{position:static}}
+.toc h4{font:600 .68rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:12px 0 8px}
+.toc button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--stone);padding:8px 0;font:500 .88rem var(--f-body);color:var(--text);cursor:pointer}
+.toc button:hover{color:var(--gold-ink)}
+.prose{max-width:68ch;font-size:1.1rem;line-height:1.75}
+.prose h2{font-size:1.9rem;margin:44px 0 14px;scroll-margin-top:90px}
+.prose p{margin-bottom:18px}
+.prose .kicker{font-size:1.28rem;line-height:1.6;color:var(--ink)}
+.prose blockquote{margin:28px 0;padding:6px 0 6px 20px;border-left:3px double var(--gold);font-family:var(--f-display);font-size:1.45rem;line-height:1.35;color:var(--ink);font-style:italic}
+.prose .tbl{overflow-x:auto;margin:22px 0}
+.prose table{border-collapse:collapse;width:100%;min-width:560px;font-size:.92rem;line-height:1.45}
+.prose th{font:600 .66rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:10px;border-bottom:1px solid var(--ink);background:var(--paper-2);color:var(--muted)}
+.prose td{padding:10px;border-bottom:1px solid var(--stone);vertical-align:top}
+.prose .cap{font:500 .72rem var(--f-mono);color:var(--muted);margin-top:8px}
+.share{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:30px 0}
+.author{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;border-top:1px solid var(--ink);border-bottom:3px double var(--ink);padding:22px 0;margin-top:36px}
+.author .logo-slot{width:72px;height:72px;font-size:1.7rem}
+.disclosure{font-size:.86rem;color:var(--muted);margin-top:18px}
+
+/* ---------- Connect ---------- */
+.connect-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:900px){.connect-grid{grid-template-columns:minmax(0,1fr)}}
+form.cf{display:grid;gap:22px}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend,.flabel{font:600 .7rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;padding:0}
+.reasons{display:flex;flex-wrap:wrap;gap:8px}
+.reasons label{position:relative}
+.reasons input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.reasons span{display:inline-block;border:1px solid var(--rule);background:var(--card);padding:9px 14px;font-size:.9rem;cursor:pointer}
+.reasons input:checked+span{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.reasons input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+.frow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:620px){.frow{grid-template-columns:minmax(0,1fr)}}
+.field{display:grid;gap:6px;min-width:0}
+.field label{font:600 .7rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.field label i{font-style:normal;color:var(--gold-ink);text-transform:none;letter-spacing:0}
+.field input,.field select,.field textarea{font:400 1rem var(--f-body);color:var(--ink);background:var(--card);border:0;border-bottom:1px solid var(--ink);padding:11px 2px;width:100%;border-radius:0}
+.field textarea{min-height:130px;resize:vertical;border:1px solid var(--rule);padding:12px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 2px 0 var(--gold)}
+.err{color:#B3261E;font-size:.84rem;min-height:1em}
+:root[data-theme="dark"] .err{color:#FF8A80}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .err{color:#FF8A80}}
+.consent{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:.88rem;color:var(--muted);align-items:start}
+.consent input{margin-top:4px;width:16px;height:16px;accent-color:var(--ink)}
+.hp{position:absolute;left:-5000px}
+.cond{display:grid;gap:18px;border-left:3px double var(--gold);padding-left:18px}
+.result{border:1px solid var(--ink);padding:22px;background:var(--card)}
+.result h3{font-size:1.5rem;margin-bottom:8px}
+.result pre{white-space:pre-wrap;font:400 .85rem/1.55 var(--f-mono);background:var(--paper-2);padding:14px;margin:14px 0;max-height:260px;overflow:auto}
+.routes{border-top:1px solid var(--ink)}
+.route{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:16px 0;border-bottom:1px solid var(--stone)}
+.route .k{font:600 .68rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.route .v2{font-size:1.02rem;color:var(--ink);word-break:break-word}
+.route .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.toast{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--on-ink);padding:10px 16px;font:500 .82rem var(--f-mono);z-index:80;transform:translateY(140%);opacity:0;pointer-events:none;transition:transform .25s,opacity .25s}
+.toast.show{transform:none;opacity:1}
+
+/* ---------- Footer ---------- */
+footer.site{padding-block:56px 90px;border-top:3px double var(--rule);background:var(--paper-2);font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:36px}
+@media (max-width:860px){.foot-grid{grid-template-columns:minmax(0,1fr)}}
+.foot-grid h4{font:600 .68rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.foot-grid nav{display:grid;gap:6px}
+.foot-grid nav a{text-decoration:none}
+.foot-grid nav a:hover{color:var(--gold-ink)}
+.legal{margin-top:36px;padding-top:20px;border-top:1px solid var(--rule);display:grid;gap:8px;color:var(--muted);font-size:.8rem;line-height:1.55}
+.legal b{color:var(--text)}
+
+/* photographs */
+.photo{margin:0;border:1px solid var(--ink);background:var(--card);padding:8px}
+.photo img{display:block;width:100%;height:auto;max-width:100%}
+.photo figcaption{font:500 .66rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:8px}
+.press-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.press-photos a{display:block;border:1px solid var(--rule)}
+.press-photos img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.wide-photo{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:center}
+@media (max-width:860px){.wide-photo{grid-template-columns:minmax(0,1fr)}}
+/* reveal: elements are visible at rest; motion only nudges them */
+.rv{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.pre{transform:translateY(14px)}
+@media (prefers-reduced-motion:reduce){.rv,.rv.pre{transform:none;transition:none}}
+/* ---------- Phones & small tablets (desktop layout above 900px is unchanged) ---------- */
+img,video,canvas,iframe,embed,object{max-width:100%}
+img,video{height:auto}
+iframe,embed,object{border:0}
+@media (max-width:900px){
+  html,body{overflow-x:clip}
+  body{overflow-wrap:break-word}
+  h1,h2,h3,h4,.route .v2,.feed-card .handle{overflow-wrap:anywhere}
+  .tag{white-space:normal}
+  .ventures{grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr))}
+  .ideas{grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr))}
+  .cats{grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr))}
+  .feed{grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr))}
+  .cred{grid-template-columns:repeat(auto-fill,minmax(min(210px,100%),1fr))}
+  .filters select{min-width:0;width:100%}
+  .filters label{flex:1 1 200px}
+  .feed-card iframe[src*="youtube"]{aspect-ratio:16/9;min-height:0!important;height:auto}
+
+  /* readable body text: nothing below 16px */
+  .acct .d,.pr p,.entry .sum,.interest-list span,.feed-card p,.bio-box p,table.journal,.journal td .sub,
+  .cred span,.v dl div,.v .dom,.practice li,.disc,.steps p,.cats span,.consent,.ledger-aside,.explore li,
+  .dlg-body .kv,.disclosure,footer.site,.legal,.prose table,.listview button,.reasons span,.toc button,
+  .nav a,.field input,.field select,.field textarea,.filters select{font-size:1rem}
+  main p[style*="font-size:."],main span[style*="font-size:."]{font-size:1rem!important}
+
+  /* tap targets: at least 44 x 44px */
+  .menu-btn{min-height:44px;min-width:44px;padding:10px 14px}
+  .nav{max-height:calc(100dvh - 70px);overflow-y:auto}
+  .nav a{min-height:44px;display:flex;align-items:center}
+  .nav .nav-cta{justify-content:center;padding:12px 14px}
+  .soc,.v footer .soc{min-width:44px;height:44px}
+  .route[style*="grid-template-columns:40px"]{grid-template-columns:44px minmax(0,1fr)!important}
+  .x{width:44px;height:44px}
+  .btn{min-height:44px}
+  .btn.small{padding:10px 16px;font-size:.95rem}
+  .copy-btn{min-height:44px;padding:12px 0 8px;font-size:.78rem}
+  .chip{min-height:44px;padding:10px 16px;font-size:.85rem}
+  .view-toggle button{min-height:44px;padding:10px 16px}
+  .reasons span{padding:11px 16px}
+  .toc button{min-height:44px;padding:10px 0}
+  .notes-toggle{min-height:44px;padding:12px 14px}
+  .foot-grid nav{gap:0}
+  .foot-grid nav a{display:flex;align-items:center;min-height:44px}
+  .link{position:relative}
+  .link::after{content:"";position:absolute;inset:-12px -4px}
+  .consent{grid-template-columns:28px minmax(0,1fr);min-height:44px}
+  .consent input{width:22px;height:22px;margin-top:2px}
+  .field input,.field select{min-height:44px}
+}
+@media (max-width:520px){
+  .phead h1{font-size:clamp(2.1rem,11vw,2.8rem)}
+  .art-head h1{font-size:clamp(1.9rem,9vw,2.4rem)}
+  .hero h1{font-size:clamp(2.8rem,17vw,3.4rem)}
+}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Satvik Shah, home">
+      <b>Satvik Shah</b>
+      <span>CA · DISA · DIRM · MBA</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#home" data-r="home">Home</a>
+      <a href="#about" data-r="about">About</a>
+      <a href="#work" data-r="work">My Work</a>
+      <a href="#advisory" data-r="advisory">Work With Me</a>
+      <a href="#perspectives" data-r="perspectives">Perspectives</a>
+      <a href="#beyond" data-r="beyond">Beyond Work</a>
+      <a href="#connect" data-r="connect" class="nav-cta">Connect</a>
+    </nav>
+    <div class="socials js-social" aria-label="Social profiles"></div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- =========================== HOME =========================== -->
+<div class="page" data-route="home" data-title="Satvik Shah · Beyond Numbers">
+
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-meta">
+            <span class="eyebrow">Chartered Accountant · Entrepreneur · Advisor</span>
+            <span class="eyebrow" style="color:var(--muted)">Vadodara, India</span>
+          </div>
+          <h1 id="h-hero">Satvik <span class="l2">Shah</span></h1>
+          <p class="thesis">Beyond Numbers. <em>Building Systems, Businesses &amp; Meaningful Connections.</em></p>
+          <p class="support">Chartered Accountant, entrepreneur, strategic advisor and lifelong learner. For over two decades, my work has connected finance, business systems, risk, technology and people. This space brings together what I do, what I am building, what I think and the conversations I hope to create.</p>
+          <div class="btns">
+            <a class="btn primary" href="#about">Get to Know Me <span class="arrow">→</span></a>
+            <a class="btn ghost" href="#connect">Let's Connect</a>
+            <a class="link" href="#work" style="margin-left:6px">Explore My Work</a>
+          </div>
+        </div>
+        <figure class="portrait" style="margin:0">
+          <span class="corner tl"></span><span class="corner br"></span>
+          <div class="frame js-portrait" role="img" aria-label="Portrait of Satvik Shah">
+            <div class="monogram" aria-hidden="true">SS<small>EST. 2006</small></div>
+          </div>
+          <figcaption><span>Fig. 1 · Satvik Shah</span><span>Vadodara</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="stats" aria-label="At a glance">
+        <div class="stat"><div class="n mono">2006</div><div class="k">Qualified as a Chartered Accountant</div></div>
+        <div class="stat"><div class="n mono"><span class="js-count" data-to="20">20</span><sup>+</sup></div><div class="k">Years across finance &amp; business</div></div>
+        <div class="stat"><div class="n mono"><span class="js-count" id="statDir" data-to="4">4</span></div><div class="k">Active directorships</div></div>
+        <div class="stat"><div class="n mono"><span class="js-count" id="statOrg" data-to="16">16</span></div><div class="k">Organisations, brands &amp; roles mapped</div></div>
+      </div>
+    </div>
+    <div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
+  </section>
+
+  <!-- B. Introduction -->
+  <section class="sec" aria-labelledby="h-intro">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>01</b></div>
+      <div class="body">
+        <div class="intro-grid">
+          <div>
+            <p class="eyebrow" style="margin-bottom:14px">A brief introduction</p>
+            <h2 id="h-intro" class="sr">A brief introduction</h2>
+            <p class="lede dropcap">I qualified as a Chartered Accountant in 2006 and began my career in the accounts and insurance functions at Torrent Pharmaceuticals. Two years later I became a promoter director of JS Assignments, and since then my work has moved steadily from recording numbers to designing the systems that produce them, and from advising businesses to helping build them.</p>
+            <p class="lede" style="margin-top:16px">Today that work spans virtual CFO support, MIS and automation, infrastructure execution, engineering, energy, consumer brands and education. Along the way I added qualifications in information systems audit, insurance and risk management, and an MBA in insurance and financial planning, because each new problem asked for a new way of looking at it.</p>
+            <p class="lede" style="margin-top:16px">What connects all of it is a simple belief: good financial information should lead to better decisions, and good systems should make people more accountable, not less human.</p>
+            <p style="margin-top:24px"><a class="link" href="#about">Read my story <span class="arrow">→</span></a></p>
+          </div>
+          <aside class="ledger-aside" aria-label="Career ledger summary">
+            <p class="eyebrow" style="padding:12px 0 6px">Opening balances</p>
+            <div class="row"><span>Chartered Accountant</span><span>2006</span></div>
+            <div class="row"><span>Torrent Pharmaceuticals</span><span>2006–08</span></div>
+            <div class="row"><span>JS Assignments, Promoter Director</span><span>2008–</span></div>
+            <div class="row"><span>ICA Edu Skills, AVP</span><span>2010–20</span></div>
+            <div class="row"><span>A&amp;W Engineering, Director</span><span>2018–</span></div>
+            <div class="row"><span>MBA, Chitkara University</span><span>2020–22</span></div>
+            <div class="row"><span>7E's Industries, Director</span><span>2021–</span></div>
+            <div class="row"><span>Artkart Lifestyle, Director</span><span>2023–</span></div>
+            <div class="row tot"><span>Carried forward</span><span>2026 →</span></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C. World of work -->
+  <section class="sec" aria-labelledby="h-world">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>02</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">My world of work</span>
+          <h2 id="h-world"><span class="total">Six account heads.</span> One ledger.</h2>
+          <p>My work falls under six heads. Each one leads to the organisations and roles behind it, described with my exact capacity in each.</p>
+        </div>
+        <div class="accounts" id="accounts"></div>
+        <div style="margin-top:40px">
+          <div class="map-shell">
+            <div class="map-bar">
+              <span class="eyebrow">The connected world · select any point</span>
+              <div class="map-legend"><span><i style="background:var(--ok)"></i>Active</span><span><i style="background:var(--emerging)"></i>Emerging</span><span><i style="background:var(--past)"></i>Past</span></div>
+            </div>
+            <div class="map-scroll"><svg class="map-svg" id="map-home" viewBox="0 0 1000 700" role="group" aria-label="Map of Satvik Shah's areas of work and associated organisations"></svg></div>
+            <p class="map-note">Lines show where I contribute. They do not show ownership or control. <a class="link" href="#work">See the list view</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ways to work together -->
+  <section class="sec" aria-labelledby="h-ways">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>03</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">Ways to work together</span>
+          <h2 id="h-ways">Where I can be <span class="total">useful to you.</span></h2>
+          <p>Most conversations with me begin with one of four kinds of question. If yours fits, start there. If it does not, write anyway.</p>
+        </div>
+        <div class="ways" id="ways-home"></div>
+        <p style="margin-top:28px"><a class="link" href="#advisory">How engagements work <span class="arrow">→</span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- D. How I think -->
+  <section class="sec" aria-labelledby="h-think">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>04</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">How I think</span>
+          <h2 id="h-think">Six principles I <span class="total">keep returning to.</span></h2>
+          <p>These are the ideas behind how I advise, build and hire. Each one can be copied and shared.</p>
+          <span class="note">These principles are drafted from your brief and your work. Edit the wording until each one sounds like you.</span>
+        </div>
+        <div class="principles" id="principles"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E. Perspectives -->
+  <section class="sec" aria-labelledby="h-persp">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>05</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">Selected perspectives</span>
+          <h2 id="h-persp">Ideas, observations and <span class="total">lessons from business and life.</span></h2>
+        </div>
+        <div class="register" id="register-home"></div>
+        <p style="margin-top:24px"><a class="link" href="#perspectives">All perspectives <span class="arrow">→</span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- F + G. Beyond & Exploring -->
+  <section class="sec" aria-labelledby="h-beyondt">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>06</b></div>
+      <div class="body split">
+        <div>
+          <div class="sec-head" style="margin-bottom:24px">
+            <span class="eyebrow">Beyond the designations</span>
+            <h2 id="h-beyondt">The person outside <span class="total">the balance sheet.</span></h2>
+            <p>Teaching, sport, devotion, creative work and a habit of going back to study. These shape the work as much as any qualification.</p>
+          </div>
+          <div class="interest-list">
+            <div><b>Teaching</b><span>Two decades of classrooms and training rooms</span></div>
+            <div><b>Learning</b><span>Back to study at 14 years post-qualification</span></div>
+            <div><b>Sport</b><span>Tennis, and the discipline it asks for</span></div>
+            <div><b>Devotion</b><span>Krishna, culture and craft</span></div>
+          </div>
+          <p style="margin-top:22px"><a class="link" href="#beyond">Beyond work <span class="arrow">→</span></a></p>
+        </div>
+        <div class="explore" aria-labelledby="h-exp">
+          <span class="eyebrow">Currently exploring</span>
+          <h3 id="h-exp">What I'm exploring now</h3>
+          <ol>
+            <li><span>Where AI genuinely saves hours in the accounts function, and where it still needs a reviewer.</span></li>
+            <li><span>Execution as a discipline: building XCo, The Execution Company, with fellow founding members.</span></li>
+            <li><span>Accountability systems for finance teams: daily close checklists and task desks that people actually use.</span></li>
+            <li><span>Ayurveda-inspired wellness as a consumer category, through Avyukt Health (under evaluation).</span></li>
+            <li><span><span class="ph">The book or idea you are reading about right now</span></span></li>
+          </ol>
+          <small>Last updated · October 2026</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social feed -->
+  <section class="sec" aria-labelledby="h-feed">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>07</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">Latest from my channels</span>
+          <h2 id="h-feed">Follow along <span class="total">between conversations.</span></h2>
+          <p>Short updates, articles and talks, wherever you prefer to read them.</p>
+          <span class="note">Live posts appear here automatically once the site is hosted on satvikshah.com. Preview pages cannot load embedded feeds.</span>
+        </div>
+        <div class="feed" id="feed"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- H. Invitation -->
+  <section class="band" aria-labelledby="h-inv">
+    <div class="wrap">
+      <span class="eyebrow">Invitation</span>
+      <h2 id="h-inv" style="margin-top:16px">Good conversations often become meaningful relationships, fresh perspectives and unexpected opportunities.</h2>
+      <p>Whether you are weighing a business decision, a property transaction, a partnership or a career step, a short note is the best place to begin.</p>
+      <div class="btns">
+        <a class="btn primary" href="#connect">Start a Conversation <span class="arrow">→</span></a>
+        <a class="btn ghost js-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== ABOUT =========================== -->
+<div class="page" data-route="about" data-title="About · Satvik Shah" hidden>
+  <section class="phead">
+    <div class="wrap">
+      <span class="eyebrow">About · The human story</span>
+      <h1>From the ledger <em>to the larger picture.</em></h1>
+      <p class="lede">A Chartered Accountant who kept asking what the numbers were for, and followed the answer into systems, businesses and classrooms.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>11</b></div>
+      <div class="body about-top">
+        <article class="story" aria-labelledby="h-story">
+          <h2 id="h-story" class="sr">My story</h2>
+          <p>I am a Chartered Accountant by training and a builder by temperament. For twenty years I have worked where finance meets operations: closing books, designing reports, setting up controls, structuring deals, and more and more often, helping to run the businesses themselves. This page is the longer version of how that happened.</p>
+
+          <h3><span class="mono">I.</span>Early foundations</h3>
+          <p>I was a studious boy, and from early on I knew what I wanted to do with it. I wanted to bring my head for commerce and my creative streak to real businesses, and to contribute to them in a way that showed. I completed my B.Com and M.Com <span class="ph">at [institution], [years]</span>, and chartered accountancy was the natural next step.</p><p>Looking back, the role I grew into was always going to be the virtual CFO. It is the one position that lets me contribute to many businesses at once, combining the discipline of finance with the creativity of building something.</p>
+
+          <h3><span class="mono">II.</span>Becoming a Chartered Accountant</h3>
+          <p>I qualified as a Chartered Accountant in 2006. The articleship years taught me what textbooks could not: that every ledger reflects a set of human decisions, and that most errors are process failures before they are accounting failures. <span class="ph">Add one story from articleship or the exams that still shapes how you work.</span></p>
+
+          <h3><span class="mono">III.</span>Lessons from the corporate floor</h3>
+          <p>My first role was as Assistant Manager in the accounts and insurance functions at Torrent Pharmaceuticals, from 2006 to 2008. Working inside a large organisation showed me how scale depends on routine: closing processes that run on time, insurance cover that is reviewed before it is needed, and controls that people actually follow. It was also my first serious exposure to risk and insurance, a thread that has stayed with me ever since.</p>
+
+          <div class="pull">“Financial information is only as valuable as the decision it improves.”</div>
+
+          <h3><span class="mono">IV.</span>Into enterprise</h3>
+          <p>In 2008 I became a promoter director of JS Assignments Private Limited. The company grew in two directions that look different but share a discipline. On one side is finance and management consulting: virtual CFO support, MIS, compliance management and process improvement for owner-managed businesses. On the other is execution: road works carried out as a subcontractor on infrastructure projects. Running both taught me that a site schedule and a month-end close fail for the same reasons, and succeed for the same reasons too.</p>
+
+          <h3><span class="mono">V.</span>Teaching alongside working</h3>
+          <p>From 2010 to 2020 I was Associate Vice President at ICA Edu Skills, and I have taught at The Maharaja Sayajirao University of Baroda and at ICA. Teaching forces clarity. If I cannot explain a GST credit rule or a cash-flow statement to a first-year student, I probably do not understand it as well as I think. That habit of explaining things simply now runs through my advisory work, and through ARTHA ASCENT, the foundation programme we have built at JS Assignments.</p>
+
+          <h3><span class="mono">VI.</span>From accounting to systems</h3>
+          <p>My DISA qualification in information systems audit changed how I look at finance teams. I stopped asking only whether the numbers were right and started asking whether the process that produced them could be trusted without me in the room. Much of my recent work is exactly that: expense approval portals, billing systems, daily book-closure checklists, accountability trackers, and reports that tell an owner what to do next instead of what happened last quarter.</p>
+
+          <h3><span class="mono">VII.</span>Engineering, energy and consumer brands</h3>
+          <p>Since 2018 I have been a director of A&amp;W Engineering Works (India) Private Limited, which works in ultrasonic and medical-device engineering. In 2021 I joined the board of 7E's Industries Private Limited in the energy sector, and in 2023 Artkart Lifestyle Private Limited, an art-and-craft business. I am also CFO of Hyderabad Strikers in the Tennis Premier League, and act as CFO for engineering, infrastructure and consumer businesses, and I am closely involved with Avyukt World, a Krishna-themed devotional and lifestyle brand that is as much a personal passion as a business.</p>
+
+          <h3><span class="mono">VIII.</span>Risk, insurance and the long view</h3>
+          <p>Risk has been a constant. After DIRM, I went back to study fourteen years after qualifying as a CA, completing an MBA in Insurance and Financial Planning at Chitkara University in 2022. I also advise families and business owners on life insurance as an agent of Life Insurance Corporation of India. I see insurance as a risk decision before it is a product decision, and I try to keep the conversation in that order.</p>
+
+          <h3><span class="mono">IX.</span>People, trust and discipline</h3>
+          <p>Across every role, the lesson that repeats is that systems do not run businesses; people do. The best system is one that makes good work visible and makes it easy for people to do the right thing. I value straight answers, written commitments and follow-through, and I try to offer the same. <span class="ph">Optionally name a mentor or a turning point that shaped this belief.</span></p>
+
+          <h3><span class="mono">X.</span>The years ahead</h3>
+          <p>I am now a founding member of XCo, The Execution Company, and I am spending more time writing, mentoring and turning what I have learned into repeatable systems that other businesses can use. I want to help more owner-managed businesses in India make decisions with the clarity that large companies take for granted. <span class="ph">Add one personal aspiration for the next decade.</span></p>
+        </article>
+
+        <aside>
+          <figure class="photo" style="margin-bottom:18px"><img src="img/polo.jpg" alt="Satvik Shah in a navy striped polo shirt, smiling, at his office" width="640" height="800" loading="lazy"><figcaption>Fig. 2 · At work, Vadodara</figcaption></figure>
+          <div class="bio-box">
+            <header><span class="eyebrow">Short bio · 50 words</span><button class="copy-btn" data-copy="#bio50">Copy</button></header>
+            <p id="bio50">CA Satvik Shah is a Vadodara-based Chartered Accountant and entrepreneur with two decades of work across corporate finance, virtual CFO services, business systems, infrastructure, engineering and consumer brands. A promoter director of JS Assignments Private Limited, he holds DISA and DIRM qualifications and an MBA in Insurance and Financial Planning.</p>
+          </div>
+          <div class="bio-box">
+            <header><span class="eyebrow">Media bio · 150 words</span><button class="copy-btn" data-copy="#bio150">Copy</button></header>
+            <p id="bio150">CA Satvik Shah is a Chartered Accountant (2006) based in Vadodara, India, whose work connects finance, business systems, risk and entrepreneurship. He began his career in the accounts and insurance functions of Torrent Pharmaceuticals and in 2008 became a promoter director of JS Assignments Private Limited, which provides virtual CFO, MIS, compliance and process-automation support and executes infrastructure works. He is a director of A&amp;W Engineering Works (India) Private Limited, 7E's Industries Private Limited and Artkart Lifestyle Private Limited, and is CFO of Hyderabad Strikers in the Tennis Premier League, alongside CFO roles in engineering, consumer goods and technology businesses. He holds the DISA and DIRM qualifications, an M.Com, and an MBA in Insurance and Financial Planning from Chitkara University. A long-time educator, he spent a decade with ICA Edu Skills and has taught at MSU Baroda and ICA. He is a founding member of XCo, The Execution Company.</p>
+          </div>
+          <a class="btn ghost small" href="#presskit">Digital press kit <span class="arrow">→</span></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-journal">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>12</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">The journey</span>
+          <h2 id="h-journal">A journal of <span class="total">a career.</span></h2>
+          <p>Every entry, posted in date order, with its folio reference to the area of work it belongs to.</p>
+        </div>
+        <div class="table-scroll">
+          <table class="journal">
+            <caption>Journal · Satvik Shah · in date order</caption>
+            <thead><tr><th scope="col">Date</th><th scope="col">Particulars</th><th scope="col">L.F.</th><th scope="col">Nature</th></tr></thead>
+            <tbody id="journal"></tbody>
+            <tfoot><tr><td>2026</td><td colspan="3">Balance carried forward. Still learning, still building.</td></tr></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-cred">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>13</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">Credentials</span>
+          <h2 id="h-cred">Qualifications</h2>
+        </div>
+        <div class="cred">
+          <div><b>CA</b><span>Chartered Accountant · The Institute of Chartered Accountants of India · 2006</span></div>
+          <div><b>DISA</b><span>Information Systems Audit · ICAI · <span class="ph">year</span></span></div>
+          <div><b>DIRM</b><span>Insurance &amp; Risk Management · <span class="ph">issuing body, year</span></span></div>
+          <div><b>MBA</b><span>Insurance &amp; Financial Planning · Chitkara University · 2022</span></div>
+          <div><b>M.Com</b><span><span class="ph">University, year</span></span></div>
+          <div><b>B.Com</b><span><span class="ph">University, year</span></span></div>
+          <div><b>Forex</b><span>Foreign exchange qualification · <span class="ph">issuing body, year</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== MY WORK =========================== -->
+<div class="page" data-route="work" data-title="My Work · Satvik Shah" hidden>
+  <section class="phead">
+    <div class="wrap">
+      <span class="eyebrow">My Work · The connected ecosystem</span>
+      <h1>Organisations, brands <em>and the role I play in each.</em></h1>
+      <p class="lede">This is a record of my involvement, not a group structure. Each entry states my exact capacity, the period and the current status. Logos and links belong to the organisations themselves.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>21</b></div>
+      <div class="body">
+        <div class="filters" role="group" aria-label="Filter organisations">
+          <label for="fDim">Area of work<select id="fDim"><option value="">All areas</option></select></label>
+          <label for="fInv">Nature of involvement<select id="fInv"><option value="">All</option></select></label>
+          <label for="fSt">Status<select id="fSt"><option value="">All</option><option>Active</option><option>Emerging</option><option>Past</option></select></label>
+          <div class="view-toggle" role="group" aria-label="View">
+            <button id="vCards" aria-pressed="true">Cards</button>
+            <button id="vMap" aria-pressed="false">Map</button>
+            <button id="vList" aria-pressed="false">List</button>
+          </div>
+        </div>
+        <p class="mono muted" id="vCount" style="font-size:.8rem;margin-bottom:16px" aria-live="polite"></p>
+        <div id="vCardsWrap" class="ventures"></div>
+        <div id="vMapWrap" hidden>
+          <div class="map-shell">
+            <div class="map-scroll"><svg class="map-svg" id="map-work" viewBox="0 0 1000 700" role="group" aria-label="Map of associations"></svg></div>
+            <p class="map-note">Lines show where I contribute. They do not show ownership or control.</p>
+          </div>
+        </div>
+        <div id="vListWrap" class="listview" hidden></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== ADVISORY =========================== -->
+<div class="page" data-route="advisory" data-title="Work With Me · Satvik Shah" hidden>
+  <section class="phead">
+    <div class="wrap">
+      <span class="eyebrow">Work With Me</span>
+      <h1>Clear answers for <em>business, money and property.</em></h1>
+      <p class="lede">I work with business owners, families, founders and investors on decisions where finance, risk and execution meet. Engagements run through JS Assignments Private Limited. Tax representation, audit and certification are handled by Shweta Satvik &amp; Co., Chartered Accountants.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:clamp(32px,5vw,56px)">
+    <div class="wrap" id="practices"></div>
+  </section>
+  <section class="sec" aria-labelledby="h-steps">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>35</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">How an engagement works</span>
+          <h2 id="h-steps">Four steps, <span class="total">in writing.</span></h2>
+        </div>
+        <div class="steps">
+          <div><b>Step 1</b><h3>Conversation</h3><p>A short call or meeting to understand the question, the timeline and what a good outcome looks like.</p></div>
+          <div><b>Step 2</b><h3>Scope note</h3><p>A one-page note listing what will be done, what will not, who is involved and the fee basis.</p></div>
+          <div><b>Step 3</b><h3>Engagement letter</h3><p>A written engagement with the right entity, so responsibility and confidentiality are clear from day one.</p></div>
+          <div><b>Step 4</b><h3>Delivery &amp; review</h3><p>Work delivered in agreed stages, with a review conversation at each stage and at the end.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" aria-labelledby="h-sectors">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>36</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">Experience across sectors</span>
+          <h2 id="h-sectors">Industries I have <span class="total">worked inside.</span></h2>
+          <p>Clients are named only with their permission. These are the sectors my work has covered.</p>
+        </div>
+        <div class="sectors">
+          <span class="tag">Pharmaceuticals</span><span class="tag">Professional sports</span><span class="tag">Engineering &amp; ultrasonics</span><span class="tag">Medical devices</span><span class="tag">Energy</span><span class="tag">Road &amp; infrastructure works</span><span class="tag">Consumer &amp; D2C brands</span><span class="tag">Traditional foods</span><span class="tag">Art &amp; craft</span><span class="tag">Education &amp; skilling</span><span class="tag">Technology</span><span class="tag">Real estate &amp; land</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <span class="eyebrow">Next step</span>
+      <h2 style="margin-top:16px">Tell me what you are deciding. I will tell you honestly whether I can help.</h2>
+      <div class="btns" style="margin-top:28px"><a class="btn primary" href="#connect">Start a Conversation <span class="arrow">→</span></a><a class="btn ghost js-book" href="#" target="_blank" rel="noopener">Book a meeting</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== PERSPECTIVES =========================== -->
+<div class="page" data-route="perspectives" data-title="Perspectives · Satvik Shah" hidden>
+  <section class="phead">
+    <div class="wrap">
+      <span class="eyebrow">Perspectives</span>
+      <h1>Ideas, observations, <em>experiences and lessons.</em></h1>
+      <p class="lede">Long-form essays, short reflections and practical notes from business and life. Articles on Indian law state the law in force on the date shown and separate the law from my opinion.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>41</b></div>
+      <div class="body">
+        <p class="flabel">Explore by interest</p>
+        <div class="chips" id="interestChips" role="group" aria-label="Filter by interest"></div>
+        <div class="register" id="register-all"></div>
+        <span class="note">Only the MIS essay is written in full. The other three are titles and summaries for your review; publish each only after you have written or approved it.</span>
+      </div>
+    </div>
+  </section>
+  <section class="sec" aria-labelledby="h-ideas">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>42</b></div>
+      <div class="body">
+        <div class="sec-head">
+          <span class="eyebrow">Ideas worth sharing</span>
+          <h2 id="h-ideas">Short observations, <span class="total">free to pass on.</span></h2>
+        </div>
+        <div class="ideas" id="ideas"></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" aria-labelledby="h-cats">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>43</b></div>
+      <div class="body">
+        <div class="sec-head"><span class="eyebrow">Categories</span><h2 id="h-cats">What I write about</h2></div>
+        <div class="cats" id="cats"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== ARTICLE =========================== -->
+<div class="page" data-route="mis-article" data-title="Before the Dashboard · Satvik Shah" hidden>
+  <section class="phead">
+    <div class="wrap art-head">
+      <a class="link" href="#perspectives"><span class="arrow">←</span> Perspectives</a>
+      <p class="eyebrow" style="margin-top:28px">Finance &amp; Decision Making</p>
+      <h1>Before the dashboard: three questions every MIS should answer</h1>
+      <p class="lede">Most management reports are accurate and ignored. The fix is not more data. It is deciding, before anything is built, what the report is for.</p>
+      <div class="art-meta"><span>By Satvik Shah</span><span class="ph">Published · date</span><span>Updated · Oct 2026</span><span id="rt">— min read</span><span class="status Draft">Draft</span></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap art-layout">
+      <nav class="toc" aria-label="Contents"><h4>Contents</h4><div id="toc"></div></nav>
+      <article class="prose" id="artBody">
+        <p class="kicker">Every month, in businesses of every size, someone spends two days preparing a report that the owner reads for two minutes. The numbers are right. The formatting is careful. And nothing changes as a result.</p>
+        <p>When I review a company's MIS, I rarely find errors in the arithmetic. What I find is a report built to show that work was done, instead of a report built to help someone decide. The difference sounds small. In practice it decides whether finance is a cost centre or a steering wheel.</p>
+        <p>Before anyone opens a spreadsheet or buys dashboard software, I ask three questions. They take an hour to answer properly, and they save months of reporting that nobody uses.</p>
+
+        <h2 id="q1">1. What decision is this report for?</h2>
+        <p>Every line in a management report should connect to a decision someone can actually take. Revenue by product line matters if someone can change the product mix. Debtor ageing matters if someone will call the customer on Monday. A number that connects to no decision is trivia, however accurate it is.</p>
+        <p>The test is simple. For each line, write the name of the decision next to it. If you cannot, remove the line or move it to a supporting schedule. Most reports shrink by half, and become far more useful.</p>
+        <blockquote>A dashboard with forty numbers is a list. A dashboard with four numbers is a decision.</blockquote>
+
+        <h2 id="q2">2. What would make us act differently?</h2>
+        <p>A number on its own says very little. Gross margin of 31 per cent is neither good nor bad until you know what you expected and what you would do if it were 27. So for each important line, agree a trigger in advance: the level at which someone must look closer, and the level at which someone must act.</p>
+        <p>Triggers turn a report from a description into an alarm system. They also remove a great deal of argument, because the conversation moves from whether a number is worrying to what we agreed to do when it reached this level.</p>
+
+        <h2 id="q3">3. Who owns the number?</h2>
+        <p>A figure that belongs to everyone belongs to no one. Each line in the report needs a named owner: the person who explains it, who answers for it in the review meeting, and who acts when it crosses its trigger. The owner is not always the person who prepares it. Accounts can compile the debtor ageing, but the sales head owns collections.</p>
+        <p>Ownership is where most reporting systems quietly fail. Without it, the review meeting becomes a reading session. With it, the meeting becomes a short list of commitments.</p>
+
+        <h2 id="test">Putting it together: a one-page test</h2>
+        <p>Here is the format I use to test an existing report. The rows are illustrative, not drawn from any client.</p>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Report line</th><th>Decision it supports</th><th>Look closer at</th><th>Act at</th><th>Owner</th></tr></thead>
+            <tbody>
+              <tr><td>Debtors over 90 days</td><td>Hold supplies, escalate, or provide</td><td>Above 10% of debtors</td><td>Above 15%</td><td>Sales head</td></tr>
+              <tr><td>Gross margin by product</td><td>Re-price or change the mix</td><td>2 points below budget</td><td>4 points below</td><td>Business head</td></tr>
+              <tr><td>Cash runway</td><td>Draw on limits, defer capex</td><td>Below 90 days</td><td>Below 60 days</td><td>Finance head</td></tr>
+              <tr><td>Statutory dues pending</td><td>Pay now or plan the cash</td><td>Any item due in 7 days</td><td>Any item overdue</td><td>Accounts lead</td></tr>
+            </tbody>
+          </table>
+          <p class="cap">Illustrative thresholds. Every business should set its own.</p>
+        </div>
+        <p>If a line in your current report cannot fill all five columns, it is a candidate for removal. If a decision you care about has no line, it is a candidate for addition.</p>
+
+        <h2 id="after">What changes when MIS works</h2>
+        <p>The report gets shorter. The meeting gets shorter too, and ends with actions instead of observations. Preparation time drops because people stop polishing numbers nobody uses. And once the report is organised around decisions, it becomes much easier to automate, because you know exactly which numbers matter and when.</p>
+        <p>None of this needs expensive software. It needs an hour of honest conversation before the first cell is filled. Start with the three questions. The dashboard can come later.</p>
+
+        <div class="share" aria-label="Share this article">
+          <span class="eyebrow" style="margin-right:6px">Share</span>
+          <a class="btn ghost small" id="shLi" target="_blank" rel="noopener" href="#">LinkedIn</a>
+          <a class="btn ghost small" id="shWa" target="_blank" rel="noopener" href="#">WhatsApp</a>
+          <button class="btn ghost small" id="shCopy">Copy link</button>
+        </div>
+
+        <div class="author">
+          <div class="logo-slot" aria-hidden="true">SS</div>
+          <div>
+            <p class="eyebrow">About the author</p>
+            <p style="margin-top:6px;font-size:1rem">Satvik Shah is a Chartered Accountant (2006) and a promoter director of JS Assignments Private Limited, where he leads virtual CFO, MIS and process-automation work for owner-managed businesses. He holds the DISA and DIRM qualifications. <a class="link" href="#about">More about Satvik</a></p>
+          </div>
+        </div>
+        <p class="disclosure">This essay is general commentary for educational purposes. It is not advice for any specific business. Status: <span class="ph">draft written for your review; edit before publishing</span>.</p>
+        <h2 style="font-size:1.4rem">Related reading</h2>
+        <div class="register" id="related"></div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== BEYOND =========================== -->
+<div class="page" data-route="beyond" data-title="Beyond Work · Satvik Shah" hidden>
+  <section class="phead">
+    <div class="wrap">
+      <span class="eyebrow">Beyond Work</span>
+      <h1>The person <em>outside the designations.</em></h1>
+      <p class="lede">What I care about when I am not reviewing a ledger: learning, teaching, sport, devotion and the people around me.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap wide-photo">
+      <figure class="photo"><img src="img/candid.jpg" alt="Satvik Shah in a black tuxedo, smiling, looking away from the camera" width="1000" height="750" loading="lazy"><figcaption>Fig. 3 · An evening off the ledger</figcaption></figure>
+      <div><span class="eyebrow">In a sentence</span><p class="pull" style="margin-top:14px">“A studious boy who wanted to bring commerce and creativity to business, and found in the CFO's chair a way to do it for many businesses at once.”</p></div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>51</b></div>
+      <div class="body">
+        <div class="sec-head"><span class="eyebrow">Values</span><h2>What I try to <span class="total">live by.</span></h2></div>
+        <div class="principles">
+          <div class="pr"><span class="no">Value · 1</span><q>Keep your word in writing.</q><p>Commitments that are written down are kept more often, and remembered the same way by both sides.</p></div>
+          <div class="pr"><span class="no">Value · 2</span><q>Teach what you learn.</q><p>Explaining something is the fastest way to find out whether you understand it.</p></div>
+          <div class="pr"><span class="no">Value · 3</span><q>Build for the long run.</q><p>Brands, teams and relationships all compound. So do shortcuts, in the other direction.</p></div>
+        </div>
+        <span class="note">Three values drafted for you. Replace them with your own words, or tell me yours and I will set them.</span>
+      </div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>52</b></div>
+      <div class="body split">
+        <div>
+          <div class="sec-head" style="margin-bottom:22px"><span class="eyebrow">Interests</span><h2>Things I return to</h2></div>
+          <div class="interest-list" style="grid-template-columns:minmax(0,1fr)">
+            <div><b>Teaching &amp; mentoring</b><span>A decade at ICA Edu Skills, classes at MSU Baroda and ICA, and ARTHA ASCENT today.</span></div>
+            <div><b>Learning</b><span>CA, then DISA, DIRM, forex and an MBA completed in 2022. The list is not finished.</span></div>
+            <div><b>Tennis &amp; sport</b><span>Close to the game as CFO of Hyderabad Strikers in the Tennis Premier League, where the business of sport meets the discipline of it.</span></div>
+            <div><b>Devotion &amp; culture</b><span>Krishna, Indian craft and the stories that Avyukt World tries to bring to children.</span></div>
+            <div><b>Sketching &amp; art</b><span><span class="ph">Confirm: do you sketch? A photo of one piece would add a lot here.</span></span></div>
+            <div><b>Travel</b><span><span class="ph">Optional: places that changed how you think.</span></span></div>
+          </div>
+        </div>
+        <div>
+          <div class="sec-head" style="margin-bottom:22px"><span class="eyebrow">The personal notebook</span><h2>Short reflections</h2></div>
+          <div class="register">
+            <div class="entry" style="grid-template-columns:minmax(0,1fr)"><div><span class="cat">Reflection · <span class="ph">your first note</span></span><h3>What teaching taught me about advising</h3><p class="sum"><span class="ph">A 300-word reflection in your own voice. Suggested title only.</span></p></div></div>
+            <div class="entry" style="grid-template-columns:minmax(0,1fr)"><div><span class="cat">Reflection · <span class="ph">your note</span></span><h3>Going back to study, fourteen years after qualifying</h3><p class="sum"><span class="ph">Why you chose the MBA, and what it changed.</span></p></div></div>
+          </div>
+          <div class="sec-head" style="margin:40px 0 18px"><span class="eyebrow">Things that shape my thinking</span><h2>Books, people, ideas</h2></div>
+          <div class="ledger-aside">
+            <div class="row"><span class="ph">Book that shaped how you work</span><span>Book</span></div>
+            <div class="row"><span class="ph">A mentor or teacher</span><span>Person</span></div>
+            <div class="row"><span class="ph">An idea you keep returning to</span><span>Idea</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band"><div class="wrap"><span class="eyebrow">Say hello</span><h2 style="margin-top:16px">Not every conversation needs an agenda.</h2><div class="btns" style="margin-top:28px"><a class="btn primary" href="#connect">Write to me <span class="arrow">→</span></a></div></div></section>
+</div>
+
+<!-- =========================== CONNECT =========================== -->
+<div class="page" data-route="connect" data-title="Connect · Satvik Shah" hidden>
+  <section class="phead">
+    <div class="wrap">
+      <span class="eyebrow">Connect</span>
+      <h1>Every meaningful collaboration <em>begins with a conversation.</em></h1>
+      <p class="lede">Tell me a little about yourself and what you have in mind. I read every note personally and reply where I can be genuinely useful.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap connect-grid">
+      <div>
+        <form class="cf" id="cf" name="connect" novalidate>
+          <p class="hp"><label for="bot">Leave empty <input id="bot" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <fieldset>
+            <legend>What would you like to talk about?</legend>
+            <div class="reasons" id="reasons"></div>
+            <p class="err" id="e-reason"></p>
+          </fieldset>
+          <div class="frow">
+            <div class="field"><label for="fName">Your name</label><input id="fName" name="name" autocomplete="name" required><p class="err" id="e-name"></p></div>
+            <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" autocomplete="email" required><p class="err" id="e-email"></p></div>
+          </div>
+          <div class="frow">
+            <div class="field"><label for="fPhone">Phone / WhatsApp <i>optional</i></label><input id="fPhone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="fLi">LinkedIn profile <i>optional</i></label><input id="fLi" name="linkedin" type="url" placeholder="https://linkedin.com/in/…"></div>
+          </div>
+          <div class="cond" data-show="business partnership media speaking tax" hidden>
+            <div class="frow">
+              <div class="field"><label for="fOrg">Organisation</label><input id="fOrg" name="organisation" autocomplete="organization"></div>
+              <div class="field"><label for="fRole">Your role</label><input id="fRole" name="role" autocomplete="organization-title"></div>
+            </div>
+          </div>
+          <div class="cond" data-show="realestate" hidden>
+            <div class="frow">
+              <div class="field"><label for="fReType">Property question</label><select id="fReType" name="property_need"><option value="">Choose one</option><option>Buying or selling: tax and documentation</option><option>Land or title review</option><option>Looking for a buyer, seller or partner</option><option>Development or joint venture</option><option>Something else</option></select></div>
+              <div class="field"><label for="fReLoc">Property location (city / taluka)</label><input id="fReLoc" name="property_location"></div>
+            </div>
+          </div>
+          <div class="cond" data-show="speaking" hidden>
+            <div class="frow">
+              <div class="field"><label for="fEvDate">Event date</label><input id="fEvDate" name="event_date" type="date"></div>
+              <div class="field"><label for="fEvAud">Audience and size</label><input id="fEvAud" name="event_audience"></div>
+            </div>
+          </div>
+          <div class="cond" data-show="mentoring" hidden>
+            <div class="field"><label for="fStage">Where are you right now?</label><select id="fStage" name="career_stage"><option value="">Choose one</option><option>Student</option><option>CA / CMA / CS aspirant</option><option>Young professional (0 to 5 years)</option><option>Mid-career, considering a change</option><option>Starting a business</option></select></div>
+          </div>
+          <div class="field"><label for="fMsg">Your message</label><textarea id="fMsg" name="message" required placeholder="A few lines on what you have in mind and any timeline."></textarea><p class="err" id="e-msg"></p></div>
+          <label class="consent" for="fConsent"><input type="checkbox" id="fConsent" name="consent" value="yes" required><span>I agree that Satvik Shah may use these details to respond to my message. They will not be shared or used for marketing. <a class="link" href="#privacy">Privacy note</a></span></label>
+          <p class="err" id="e-consent"></p>
+          <div class="btns"><button class="btn primary" type="submit">Send message <span class="arrow">→</span></button><span class="muted" style="font-size:.85rem">Usually takes under two minutes.</span></div>
+        </form>
+        <div id="cfResult" class="result" hidden tabindex="-1"></div>
+      </div>
+
+      <aside aria-labelledby="h-routes">
+        <h2 id="h-routes" class="eyebrow" style="font-family:var(--f-mono);margin-bottom:10px">Other ways to reach me</h2>
+        <div class="routes">
+          <div class="route"><span class="k">Email</span><span class="v2 js-email" id="emailText"></span><div class="acts"><button class="copy-btn" data-copy="#emailText">Copy email</button></div></div>
+          <div class="route"><span class="k">WhatsApp</span><span class="v2 js-phone" id="phoneText"></span><div class="acts"><a class="btn ghost small js-wa" href="#" target="_blank" rel="noopener">Open WhatsApp</a><button class="copy-btn" data-copy="#phoneText">Copy number</button></div></div>
+          <div class="route"><span class="k">Meeting</span><span class="v2">30-minute introductory call</span><div class="acts"><a class="btn ghost small js-book" href="#" target="_blank" rel="noopener">Book a slot</a></div><span class="muted" style="font-size:.84rem">Opens my Google Calendar booking page. Pick any open slot.</span></div>
+          <div class="route"><span class="k">Contact card</span><span class="v2">Save my details to your phone</span><div class="acts"><button class="btn ghost small" id="vcardBtn">Download vCard</button></div><p class="muted" id="vcardMsg" style="font-size:.84rem" hidden></p></div>
+          <div class="route"><span class="k">Office</span><span class="v2">501, Ocean, beside Centre Square Mall, Sarabhai Compound, Vadi Wadi, Vadodara, Gujarat 391101</span></div>
+        </div>
+        <div style="margin-top:28px">
+          <h3 class="eyebrow" style="font-family:var(--f-mono);margin-bottom:10px">Follow my work</h3>
+          <div class="js-social-list"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== PRESS KIT =========================== -->
+<div class="page" data-route="presskit" data-title="Press Kit · Satvik Shah" hidden>
+  <section class="phead"><div class="wrap"><span class="eyebrow">Digital press kit</span><h1>For organisers, <em>editors and hosts.</em></h1><p class="lede">Approved biographies, speaking themes and contact details in one place.</p></div></section>
+  <section class="sec">
+    <div class="wrap sheet">
+      <div class="folio">L.F.<b>61</b></div>
+      <div class="body split">
+        <div>
+          <div class="sec-head" style="margin-bottom:20px"><span class="eyebrow">Speaking themes</span><h2>Talks I can give</h2></div>
+          <div class="register">
+            <div class="entry" style="grid-template-columns:minmax(0,1fr)"><div><h3>Finance that leads to decisions</h3><p class="sum">MIS and dashboards for owner-managed businesses.</p></div></div>
+            <div class="entry" style="grid-template-columns:minmax(0,1fr)"><div><h3>Automating the accounts function</h3><p class="sum">What to automate first, what to keep human, and how to stay in control.</p></div></div>
+            <div class="entry" style="grid-template-columns:minmax(0,1fr)"><div><h3>Risk and insurance literacy</h3><p class="sum">For families, business owners and young professionals.</p></div></div>
+            <div class="entry" style="grid-template-columns:minmax(0,1fr)"><div><h3>Property transactions without surprises</h3><p class="sum">Tax, title and documentation for buyers, sellers and landowners.</p></div></div>
+            <div class="entry" style="grid-template-columns:minmax(0,1fr)"><div><h3>From the CA's desk to the founder's chair</h3><p class="sum">Lessons from building across sectors.</p></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="sec-head" style="margin-bottom:20px"><span class="eyebrow">Assets</span><h2>Photos &amp; contact</h2></div>
+          <div class="bio-box"><header><span class="eyebrow">Short bio</span><button class="copy-btn" data-copy="#bio50">Copy</button></header><p>Use the 50-word or 150-word biography on the <a class="link" href="#about">About</a> page.</p></div>
+          <div class="bio-box"><header><span class="eyebrow">Approved photographs</span></header><p style="font-size:.9rem">Select a photo to open the high-resolution version.</p>
+            <div class="press-photos">
+              <a href="img/press-formal.jpg" target="_blank" rel="noopener"><img src="img/hero.jpg" alt="Formal portrait of Satvik Shah in a tuxedo" loading="lazy" width="720" height="900"></a>
+              <a href="img/press-casual.jpg" target="_blank" rel="noopener"><img src="img/polo.jpg" alt="Satvik Shah in a navy polo shirt" loading="lazy" width="640" height="800"></a>
+              <a href="img/press-full.jpg" target="_blank" rel="noopener"><img src="img/full.jpg" alt="Full-length portrait of Satvik Shah in a tuxedo" loading="lazy" width="540" height="720"></a>
+            </div></div>
+          <div class="bio-box"><header><span class="eyebrow">Media contact</span></header><p class="js-email"></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== PRIVACY =========================== -->
+<div class="page" data-route="privacy" data-title="Privacy · Satvik Shah" hidden>
+  <section class="phead"><div class="wrap"><span class="eyebrow">Privacy note</span><h1>What happens to <em>your details.</em></h1></div></section>
+  <section class="sec"><div class="wrap sheet"><div class="folio">L.F.<b>71</b></div><div class="body story">
+    <p>This website collects personal data only when you choose to send a message through the contact form: your name, email, and any optional details you add. It is processed in line with the Digital Personal Data Protection Act, 2023.</p>
+    <h3><span class="mono">1.</span>Purpose</h3><p>Your details are used only to read and reply to your message. They are not sold, shared for marketing, or added to any mailing list without your separate consent.</p>
+    <h3><span class="mono">2.</span>Storage</h3><p>Messages are delivered to Satvik Shah's inbox through the website's hosting provider. <span class="ph">Hosting provider name and region, once live.</span></p>
+    <h3><span class="mono">3.</span>Retention</h3><p>Messages are kept for as long as needed to respond and follow up, and deleted on request.</p>
+    <h3><span class="mono">4.</span>Your rights</h3><p>You can ask to see, correct or delete the details you have sent by writing to the email address on the Connect page.</p>
+    <h3><span class="mono">5.</span>Analytics</h3><p>The site uses no advertising trackers. <span class="ph">If privacy-friendly analytics are added later, name them here.</span></p>
+  </div></div></section>
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p style="font-family:var(--f-display);font-size:1.8rem;color:var(--ink);line-height:1.1">Satvik Shah</p>
+        <p class="muted" style="margin-top:8px;max-width:40ch">Beyond Numbers. Building Systems, Businesses &amp; Meaningful Connections.</p>
+        <div class="js-social" style="display:flex;gap:6px;margin-top:16px;flex-wrap:wrap"></div>
+      </div>
+      <div><h4>Explore</h4><nav aria-label="Footer"><a href="#about">About</a><a href="#work">My Work</a><a href="#advisory">Work With Me</a><a href="#perspectives">Perspectives</a><a href="#beyond">Beyond Work</a><a href="#presskit">Press kit</a><a href="#privacy">Privacy</a></nav></div>
+      <div><h4>Contact</h4><p class="js-email"></p><p class="js-phone" style="margin-top:4px"></p><p class="muted" style="margin-top:8px">Vadodara, Gujarat, India</p></div>
+    </div>
+    <div class="legal">
+      <p><b>Professional status.</b> Satvik Shah is a member of the Institute of Chartered Accountants of India and does not hold a Certificate of Practice. Audit, attestation, certification and tax representation are provided by Shweta Satvik &amp; Co., Chartered Accountants (FRN 136727W), whose proprietor is CA Shweta Shah.</p>
+      <p><b>Insurance.</b> Life insurance advice is offered in the capacity of an agent of Life Insurance Corporation of India (agency code 04081876). Insurance is the subject matter of solicitation.</p>
+      <p><b>Investments.</b> Not registered with SEBI as an investment adviser or research analyst. Nothing on this site is a recommendation to buy or sell any security.</p>
+      <p><b>Real estate.</b> Not registered as a real estate agent under the Real Estate (Regulation and Development) Act, 2016. Brokerage of projects registered under that Act is not undertaken.</p>
+      <p><b>Content.</b> Articles are general commentary for education, current as of the date shown. They are not advice for your specific situation.</p>
+      <p>© <span id="yr">2026</span> Satvik Shah. Organisation names, logos and websites belong to their respective owners and are shown to describe Satvik's involvement only.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="notes-toggle" id="notesToggle" aria-pressed="true">Editor notes · on</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlg-head"><div><p class="eyebrow" id="dlgEyebrow"></p><h3 id="dlgTitle"></h3></div><button class="x" id="dlgClose" aria-label="Close">✕</button></div>
+  <div class="dlg-body" id="dlgBody"></div>
+</dialog>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfilePage","url":"https://www.satvikshah.com/","mainEntity":{"@type":"Person","name":"Satvik Shah","honorificPrefix":"CA","jobTitle":"Chartered Accountant and Company Director","url":"https://www.satvikshah.com/","address":{"@type":"PostalAddress","addressLocality":"Vadodara","addressRegion":"Gujarat","addressCountry":"IN"},"image":"https://www.satvikshah.com/img/hero.jpg","sameAs":["https://www.linkedin.com/in/satvik-shah-40106a8","https://www.instagram.com/shahsatvik/"],"worksFor":{"@type":"Organization","name":"JS Assignments Private Limited","url":"https://www.jsassignments.com/"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Chitkara University"},"memberOf":{"@type":"Organization","name":"The Institute of Chartered Accountants of India"},"knowsAbout":["Virtual CFO services","Management information systems","Business process automation","Goods and Services Tax","Income tax","Risk management","Life insurance","Real estate transaction advisory"]}}
+</script>
+
+<script>
+(function(){
+"use strict";
+/* ================= CONFIG: edit these ================= */
+const CONFIG = {
+  EMAIL: "satvikshah@jsassignments.com",
+  PHONE: "+91 98980 12617",
+  WA: "919898012617",
+  SITE: "https://www.satvikshah.com/",
+  BOOKING_URL: "https://calendar.app.google/xynkXrH2D5MduNbC8", // Google Calendar appointment schedule
+  PHOTO: "img/hero.jpg",        // hero portrait
+  LIVE_HOSTS: ["satvikshah.com","www.satvikshah.com"],
+  FORM_ENDPOINT: "https://formsubmit.co/ajax/satvikshah@jsassignments.com", // delivers enquiries to this inbox
+};
+const SOCIAL = [
+  {key:"linkedin", label:"LinkedIn", abbr:"in", url:"https://www.linkedin.com/in/satvik-shah-40106a8", handle:"in/satvik-shah-40106a8", shares:"Professional updates, articles and milestones."},
+  {key:"instagram",label:"Instagram",abbr:"IG", url:"https://www.instagram.com/shahsatvik/", handle:"@shahsatvik", shares:"Behind the work: places, people and moments."},
+  {key:"facebook", label:"Facebook", abbr:"f",  url:"https://www.facebook.com/share/1dTaNUwfni/", handle:"Facebook profile", shares:"Updates for friends, family and community."},
+  {key:"facebook2",label:"Facebook page", abbr:"f²", url:"https://www.facebook.com/share/19cj9A9gaE/", handle:"Facebook page", shares:"Business updates and announcements."},
+  {key:"youtube",  label:"YouTube",  abbr:"YT", url:"", handle:"", shares:"Talks, explainers and training sessions."},
+  {key:"x",        label:"X",        abbr:"X",  url:"", handle:"", shares:"Short observations on business and policy."},
+];
+// Live feeds (used only on the live domain): paste embed sources here later.
+const FEED = {
+  linkedin: [],       // e.g. "https://www.linkedin.com/embed/feed/update/urn:li:share:XXXXXXXX"
+  instagram: [],      // e.g. "https://www.instagram.com/p/POSTCODE/embed"
+  youtubeChannelId: "",  // e.g. "UCxxxxxxxx" -> shows latest uploads
+  facebookPage: "",   // e.g. "https://www.facebook.com/yourpage"
+};
+
+/* ================= DATA ================= */
+const PH = t => `<span class="ph">${t}</span>`;
+const DIMS = [
+  {id:"practice", code:"A/c 101", name:"Professional Practice & Advisory", desc:"Virtual CFO support, MIS, controls and business advisory, with tax, audit and compliance delivered through an associated CA firm."},
+  {id:"infra", code:"A/c 102", name:"Business Management & Infrastructure", desc:"Running companies and delivering projects, from road works to execution consulting."},
+  {id:"tech", code:"A/c 103", name:"Technology, Energy & Medical Devices", desc:"Board roles in engineering companies working on ultrasonics, medical devices and energy."},
+  {id:"consumer", code:"A/c 104", name:"Consumer Brands & Entrepreneurship", desc:"Devotional, lifestyle, food, wellness and art-and-craft brands at different stages of growth."},
+  {id:"risk", code:"A/c 105", name:"Insurance, Risk & Financial Education", desc:"Life insurance advice, risk management and foundation-level financial education."},
+  {id:"learning", code:"A/c 106", name:"Mentoring, Learning & Community", desc:"Two decades of teaching, training and mentoring students and young professionals."},
+];
+const V = [
+  {id:"jsapl", name:"JS Assignments Private Limited", short:"JS Assignments", ini:"JS", domain:"Virtual CFO, business advisory & infrastructure execution", dims:["practice","infra","risk"], cap:"Promoter Director", inv:"Director", since:"2008", status:"Active", url:"https://www.jsassignments.com/",
+   what:"A business management and execution company. Its consulting practice provides virtual CFO support, MIS, compliance management and process improvement. Its infrastructure arm executes road works as a subcontractor. Tagline: “You assign, We deliver.”",
+   contrib:"Leads the virtual CFO and advisory practice; designs reporting, controls and automation for client businesses."},
+  {id:"ssc", name:"Shweta Satvik & Co.", short:"Shweta Satvik & Co.", ini:"SS", domain:"Chartered Accountants · FRN 136727W", dims:["practice"], cap:"Director", inv:"Director", since:"2017", status:"Active", url:"https://cassc.co.in/",
+   what:"A chartered accountancy firm providing taxation, GST, accounting, audit and assurance, and compliance services. The firm's proprietor is CA Shweta Shah.",
+   contrib:PH("Your area of focus at the firm, in one line")},
+  {id:"aw", name:"A&W Engineering Works (India) Private Limited", short:"A&W Engineering", ini:"AW", domain:"Engineering · ultrasonics · medical devices", dims:["tech"], cap:"Director", inv:"Director", since:"2018", status:"Active", url:"",
+   what:"An engineering company working on ultrasonic and medical-device technology, including development work in phased-array ultrasonic testing.",
+   contrib:"Commercial strategy, contracts and project coordination."},
+  {id:"seven", name:"7E's Industries Private Limited", short:"7E's Industries", ini:"7E", domain:"Energy", dims:["tech"], cap:"Director", inv:"Director", since:"Jan 2021", status:"Active", url:"",
+   what:"A company in the energy sector. "+PH("One line on what 7E's does."), contrib:PH("Your area of focus")},
+  {id:"artkart", name:"Artkart Lifestyle Private Limited", short:"Artkart Lifestyle", ini:"AK", domain:"Art & craft · D2C and B2B", dims:["consumer"], cap:"Director", inv:"Director", since:"Oct 2023", status:"Active", url:"",
+   what:"An art-and-craft lifestyle business selling direct to consumers and to businesses.", contrib:PH("Your area of focus")},
+  {id:"avyukt", name:"Avyukt World", short:"Avyukt World", ini:"AV", domain:"Devotional & lifestyle products", dims:["consumer"], cap:PH("CFO and strategic lead (confirm title)"), inv:"CFO / advisory", since:PH("year"), status:"Active", url:"https://avyuktworld.com/",
+   what:"A Krishna-themed devotional and lifestyle brand, including children's products such as the Krishna Teddy. A unit of MNSquare Industries Private Limited.",
+   contrib:"Finance, performance reviews, procurement systems and brand growth. A personal passion as much as a business."},
+  {id:"avhealth", name:"Avyukt Health", short:"Avyukt Health", ini:"AH", domain:"Ayurveda-inspired wellness", dims:["consumer"], cap:PH("Role to confirm"), inv:"To confirm", since:"2026", status:"Emerging", url:"",
+   what:"An Ayurveda-inspired wellness brand initiative, currently under evaluation and not yet launched. No health claims are made for any product.", contrib:"Business model, sourcing terms and launch economics."},
+  {id:"sukhdi", name:"Vaishwetik Sukhdi", short:"Vaishwetik Sukhdi", ini:"VS", domain:"Traditional foods", dims:["consumer"], cap:PH("Role to confirm"), inv:"To confirm", since:PH("year"), status:"Active", url:"https://www.vaishwetiksukhdi.in/",
+   what:"A traditional food brand built around Sukhdi, the Gujarati sweet of wheat, ghee and jaggery, and its variations.", contrib:PH("Your area of focus")},
+  {id:"xco", name:"XCo, The Execution Company", short:"XCo", ini:"XC", domain:"Execution consulting · Kolkata", dims:["infra"], cap:"Founding member", inv:"Founding member", since:"2026", status:"Emerging", url:"https://xcogroup.in/",
+   what:"An execution consultancy that helps businesses turn plans into delivered results.", contrib:"Founding member; finance and execution systems."},
+  {id:"artha", name:"ARTHA ASCENT", short:"ARTHA ASCENT", ini:"AA", domain:"Financial & business education", dims:["risk","learning"], cap:PH("Programme designer (confirm)"), inv:"Teaching", since:"2026", status:"Emerging", url:"",
+   what:"A foundation programme of JS Assignments teaching accounts, economics, statistics, business administration and taxation, built as five study volumes over forty sessions.", contrib:"Curriculum design and teaching."},
+  {id:"lic", name:"Life insurance advisory", short:"Life insurance", ini:"LI", domain:"Life insurance · individual capacity", dims:["risk"], cap:"Agent, Life Insurance Corporation of India (agency code 04081876)", inv:"Individual capacity", since:PH("year"), status:"Active", url:"",
+   what:"Needs-based life insurance advice for individuals, families and business owners. Insurance is the subject matter of solicitation.", contrib:"Risk-cover reviews and policy guidance."},
+  {id:"hs", name:"Hyderabad Strikers · Tennis Premier League", short:"Hyderabad Strikers", ini:"HS", domain:"Professional tennis franchise · ENN Sports LLP", dims:["practice","infra"], cap:"CFO", inv:"CFO / advisory", since:PH("year"), status:"Active", url:"",
+   what:"Hyderabad Strikers is a franchise team in the Tennis Premier League, operated by ENN Sports LLP.",
+   contrib:"Investor MIS, restated financials, sponsorship economics and commercial decks."},
+  {id:"vcfo", name:"Virtual CFO engagements", short:"CFO roles", ini:"CF", domain:"Engineering · infrastructure · consumer · technology", dims:["practice"], cap:"Acting CFO", inv:"CFO / advisory", since:PH("year"), status:"Active", url:"",
+   what:"Acting CFO for engineering and infrastructure companies, consumer brands and a technology company, in addition to Hyderabad Strikers. Other clients are named only with their permission.", contrib:"Investor MIS, restated financials, budgets, controls and commercial decks."},
+  {id:"torrent", name:"Torrent Pharmaceuticals", short:"Torrent Pharma", ini:"TP", domain:"Pharmaceuticals", dims:["practice","risk"], cap:"Assistant Manager, Accounts & Insurance", inv:"Employment", since:"2006–2008", status:"Past", url:"",
+   what:"Corporate accounting and insurance functions at a large Indian pharmaceutical company.", contrib:"Accounts and insurance."},
+  {id:"ica", name:"ICA Edu Skills", short:"ICA Edu Skills", ini:"IC", domain:"Skill training & education", dims:["learning"], cap:"Associate Vice President", inv:"Employment", since:"2010–2020", status:"Past", url:"",
+   what:"A training organisation for accounting and finance careers.", contrib:"Leadership and training."},
+  {id:"faculty", name:"MSU Baroda & ICA", short:"Faculty roles", ini:"FA", domain:"Teaching", dims:["learning"], cap:PH("Visiting faculty (confirm)"), inv:"Teaching", since:PH("years"), status:"Past", url:"",
+   what:"Teaching at The Maharaja Sayajirao University of Baroda and at ICA.", contrib:"Commerce, accounts and finance teaching."},
+];
+const JOURNAL = [
+  ["—","B.Com and M.Com", PH("University and years"),"106","Education"],
+  ["2006","Qualified as a Chartered Accountant","The Institute of Chartered Accountants of India","101","Education"],
+  ["2006","Assistant Manager, Accounts & Insurance","Torrent Pharmaceuticals, until 2008","101","Corporate"],
+  ["2008","Promoter Director, JS Assignments Private Limited","Virtual CFO, advisory and infrastructure execution","102","Enterprise"],
+  ["2010","Associate Vice President, ICA Edu Skills","Until 2020","106","Teaching"],
+  ["—","DISA and DIRM qualifications", PH("Years"),"105","Education"],
+  ["2017","Director, Shweta Satvik & Co.","Chartered Accountants, FRN 136727W","101","Professional"],
+  ["2018","Director, A&W Engineering Works (India) Private Limited","Ultrasonics and medical-device engineering","103","Enterprise"],
+  ["2020","MBA in Insurance & Financial Planning begins","Chitkara University, completed 2022","105","Education"],
+  ["2021","Director, 7E's Industries Private Limited","Energy sector, from January","103","Enterprise"],
+  ["2023","Director, Artkart Lifestyle Private Limited","Art and craft, from October","104","Enterprise"],
+  ["—","CFO, Hyderabad Strikers","Tennis Premier League · "+PH("year you took on the role"),"101","Enterprise"],
+  ["2026","Founding member, XCo, The Execution Company","Execution consulting","102","Enterprise"],
+];
+const PRINCIPLES = [
+  ["Clarity before complexity.","An owner should be able to read their position in five minutes. Detail matters, but only once the picture is clear."],
+  ["Systems should empower people.","A good process tells people what to do next and makes good work visible. A system that only polices people gets worked around."],
+  ["Compliance is a foundation, not the destination.","Filing on time is the minimum. The real value of clean compliance is the confidence to borrow, invest, partner and grow."],
+  ["Risk deserves understanding, not avoidance.","Every decision carries risk. The work is to name it, price it, insure what should be insured and accept the rest knowingly."],
+  ["Relationships should outlast transactions.","A transaction ends when the invoice is paid. A relationship is what makes the next conversation easier, and it is built by doing what you said you would."],
+  ["Learning should never stop.","I went back to study fourteen years after qualifying as a CA. Every new problem asks for a new way of looking at it."],
+];
+const WAYS = [
+  {id:"business", t:"Business & CFO advisory", for:"For owners and boards who want clearer numbers and tighter control.",
+   items:["Virtual CFO and monthly MIS","Budgets, cash flow and working capital","Internal controls, SOPs and process automation","Fundraising readiness: models, investor MIS, term-sheet review","Contracts and commercial structuring"],
+   via:"Through JS Assignments Private Limited"},
+  {id:"financial", t:"Financial guidance & protection", for:"For families, professionals and business owners planning for the long term.",
+   items:["Personal financial plan reviews","Retirement and succession thinking","Life insurance needs analysis and cover review","NRI and cross-border questions: FEMA and tax angles","Business owner risk reviews"],
+   via:"Insurance as an agent of LIC · no securities recommendations",
+   disc:"Not registered with SEBI as an investment adviser. No advice is given on buying or selling securities. Insurance is the subject matter of solicitation."},
+  {id:"realestate", t:"Real estate advisory", for:"For buyers, sellers, landowners and developers who want the numbers and the paperwork right.",
+   items:["Transaction advisory: capital gains, TDS on property, deal structure","Land and title review, alongside your advocates","Introductions to buyers, sellers and partners, with transaction support","Development and joint-venture structuring and feasibility","Documentation and payment-schedule review"],
+   via:"Through JS Assignments Private Limited",
+   disc:"Not registered as a real estate agent under the Real Estate (Regulation and Development) Act, 2016, so brokerage of RERA-registered projects is not undertaken. Legal opinions on title come from your advocate."},
+  {id:"tax", t:"Tax, GST & compliance", for:"For businesses and individuals who need compliance done properly and on time.",
+   items:["Income tax and GST compliance and advisory","Company law and annual compliance","Audit and assurance","Notices, assessments and representation","Compliance calendars and reviews"],
+   via:"Through Shweta Satvik & Co., Chartered Accountants",
+   disc:"Audit, attestation, certification and representation are undertaken by the firm (FRN 136727W; proprietor CA Shweta Shah)."},
+];
+const CATS = [
+  ["finance","Finance & Decision Making","Virtual CFO, MIS, working capital, profitability and cash flow."],
+  ["tax","Taxation, Compliance & Governance","Income tax, GST, audit, company law and governance."],
+  ["systems","Systems, Technology & Automation","Process design, AI, SOPs, internal controls and automation."],
+  ["entre","Entrepreneurship & Business Building","Execution, partnerships, strategy and brand building."],
+  ["risk","Risk, Insurance & Financial Security","Life insurance, risk perception and long-term discipline."],
+  ["realestate","Real Estate & Property","Transactions, land, title, tax and development partnerships."],
+  ["people","Leadership & People","Teams, mentoring, communication and workplace culture."],
+  ["beyond","Beyond Business","Reflections, books, sport, culture and life lessons."],
+  ["ideas","Ideas in Progress","Open questions and evolving views, labelled as untested."],
+];
+const ARTICLES = [
+  {id:"mis", cat:"finance", catName:"Finance & Decision Making", title:"Before the dashboard: three questions every MIS should answer", sum:"Most management reports are accurate and ignored. The fix is deciding, before anything is built, what the report is for.", status:"Draft", when:"Oct 2026", href:"#mis-article", rt:null},
+  {id:"close", cat:"systems", catName:"Systems, Technology & Automation", title:"Daily book closure: the smallest habit with the largest audit dividend", sum:"Why closing a little every day beats closing a lot every month, and the short checklist that makes it stick.", status:"Outline", when:"Planned", href:null, rt:"6 min"},
+  {id:"property", cat:"realestate", catName:"Real Estate & Property", title:"Selling property under the Income-tax Act, 2025: a checklist for buyers and sellers", sum:"Capital gains, TDS and documentation in the order they actually come up in a transaction.", status:"Outline", when:"Planned", href:null, rt:"9 min"},
+  {id:"insure", cat:"risk", catName:"Risk, Insurance & Financial Security", title:"Insurance is a risk decision before it is a product decision", sum:"Start with what you cannot afford to lose. The right policy follows from that, not the other way round.", status:"Outline", when:"Planned", href:null, rt:"5 min"},
+];
+const IDEAS = [
+  "A dashboard with forty numbers is a list. A dashboard with four numbers is a decision.",
+  "If a task depends on someone remembering it, it is not yet a process.",
+  "Cash flow is the truth that profit has to explain.",
+  "Insurance bought after the need is visible is usually bought too late.",
+  "The cheapest time to fix a land title problem is before you pay the advance.",
+  "Every new venture shows you which of your old skills were really habits.",
+];
+const REASONS = [
+  ["business","Business or CFO advisory"],["financial","Financial guidance & insurance"],["realestate","Real estate"],["tax","Tax, GST & compliance"],
+  ["partnership","Partnership or collaboration"],["speaking","Speaking or training"],["media","Media or podcast"],["mentoring","Mentoring or career guidance"],["idea","Sharing an idea"],["intro","General introduction"],
+];
+
+/* ================= HELPERS ================= */
+const $ = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const isLive = () => CONFIG.LIVE_HOSTS.includes(location.hostname) || location.hostname.endsWith(".vercel.app");
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),2200);}
+function copyText(text,label){
+  const done=()=>toast(label||"Copied");
+  try{navigator.clipboard.writeText(text).then(done).catch(()=>fallback());}catch(e){fallback();}
+  function fallback(){const ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done();}catch(e){toast("Select the text to copy");}ta.remove();}
+}
+const waLink = msg => `https://wa.me/${CONFIG.WA}?text=${encodeURIComponent(msg)}`;
+const dimById = id => DIMS.find(d=>d.id===id);
+
+/* ================= CONTACT BITS ================= */
+$$(".js-email").forEach(e=>e.textContent=CONFIG.EMAIL);
+$$(".js-phone").forEach(e=>e.textContent=CONFIG.PHONE);
+$$(".js-wa").forEach(a=>a.href=waLink("Hello Satvik, I found your website and would like to connect."));
+$$(".js-book").forEach(a=>{a.href = CONFIG.BOOKING_URL || waLink("Hello Satvik, I would like to book a 30-minute introductory call. My preferred days and times are: ");});
+if(CONFIG.PHOTO){$$(".js-portrait").forEach(f=>{f.innerHTML=`<img src="${CONFIG.PHOTO}" alt="Portrait of Satvik Shah" width="400" height="500">`;});}
+$("#yr").textContent = new Date().getFullYear();
+
+/* ================= SOCIAL ================= */
+function socKey(s,cls=""){
+  if(s.url) return `<a class="soc ${cls}" href="${esc(s.url)}" target="_blank" rel="noopener me" aria-label="${s.label}" title="${s.label}">${s.abbr}</a>`;
+  return `<span class="soc missing ${cls}" title="${s.label}: link to add">${s.abbr}</span>`;
+}
+$$(".js-social").forEach(el=>el.innerHTML=SOCIAL.map(s=>socKey(s)).join(""));
+$$(".js-social-list").forEach(el=>{
+  el.innerHTML = `<div class="routes">`+SOCIAL.map(s=>`<div class="route ${s.url?"":"ph-only"}" style="grid-template-columns:40px minmax(0,1fr);align-items:center;gap:12px">${socKey(s)}<span><b style="color:var(--ink)">${s.label}</b><br><span class="muted" style="font-size:.88rem">${s.url?esc(s.handle):PH("Profile link to add")}</span></span></div>`).join("")+`</div>`;
+});
+function renderFeed(){
+  const el=$("#feed"); const live=isLive();
+  el.innerHTML = SOCIAL.map(s=>{
+    let embed="";
+    if(live){
+      if(s.key==="linkedin"&&FEED.linkedin.length) embed=FEED.linkedin.slice(0,2).map(u=>`<iframe src="${esc(u)}" title="LinkedIn post" loading="lazy"></iframe>`).join("");
+      if(s.key==="instagram"&&FEED.instagram.length) embed=FEED.instagram.slice(0,2).map(u=>`<iframe src="${esc(u)}" title="Instagram post" loading="lazy"></iframe>`).join("");
+      if(s.key==="youtube"&&FEED.youtubeChannelId) embed=`<iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UU${esc(FEED.youtubeChannelId.replace(/^UC/,""))}" title="Latest YouTube videos" loading="lazy" allowfullscreen style="min-height:220px"></iframe>`;
+      if(s.key==="facebook"&&FEED.facebookPage) embed=`<iframe src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(FEED.facebookPage)}&tabs=timeline&width=340&height=420" title="Facebook page" loading="lazy"></iframe>`;
+    }
+    return `<div class="feed-card ${s.url?"":"ph-only"}">${socKey(s)}<h3>${s.label}</h3><p>${esc(s.shares)}</p>${embed}
+      ${s.url?`<span class="handle">${esc(s.handle)}</span><a class="link" href="${esc(s.url)}" target="_blank" rel="noopener">Follow on ${s.label} <span class="arrow">↗</span></a>`:`<span class="handle">${PH("Profile link to add")}</span>`}</div>`;
+  }).join("");
+}
+renderFeed();
+
+/* ================= HOME ================= */
+$("#ticker").innerHTML = (()=>{const w=["Virtual CFO","MIS & Dashboards","GST","Income-tax Act, 2025","Process Automation","Risk & Insurance","Real Estate Advisory","Land & Title","Infrastructure","Medical Devices","Energy","Consumer Brands","Mentoring"];const s=w.map(x=>`<span>${x}</span>`).join("");return s+s;})();
+$("#accounts").innerHTML = DIMS.map(d=>{
+  const ents=V.filter(v=>v.dims.includes(d.id)&&v.status!=="Past").map(v=>`<span class="tag">${esc(v.short)}</span>`).join("");
+  return `<a class="acct" href="#work" data-dim="${d.id}"><span class="code">${d.code}</span><div><h3>${esc(d.name)}</h3><div class="tags">${ents}</div></div><p class="d">${esc(d.desc)}</p><span class="go" aria-hidden="true">→</span></a>`;
+}).join("");
+$$(".acct").forEach(a=>a.addEventListener("click",()=>{pendingDim=a.dataset.dim;}));
+let pendingDim=null;
+
+function wayHtml(w,i,full){
+  return `<div class="way"><span class="no">Practice ${i+1} of ${WAYS.length}</span><h3>${esc(w.t)}</h3><p class="muted">${esc(w.for)}</p>
+  <ul>${w.items.slice(0,full?9:3).map(x=>`<li>${esc(x)}</li>`).join("")}</ul><span class="via">${esc(w.via)}</span>
+  <div><a class="btn ghost small" href="#connect" data-reason="${w.id}">Discuss this <span class="arrow">→</span></a></div></div>`;
+}
+$("#ways-home").innerHTML = WAYS.map((w,i)=>wayHtml(w,i,false)).join("");
+$("#practices").innerHTML = WAYS.map((w,i)=>`<div class="practice" id="p-${w.id}"><div class="pno">0${i+1}</div><div class="practice-in">
+  <div><h2>${esc(w.t)}</h2><p class="lede" style="font-size:1.05rem">${esc(w.for)}</p><p class="via" style="margin-top:14px">${esc(w.via)}</p>${w.disc?`<p class="disc">${esc(w.disc)}</p>`:""}</div>
+  <div><h4>Typical engagements</h4><ul>${w.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><a class="btn primary small" href="#connect" data-reason="${w.id}">Start this conversation <span class="arrow">→</span></a></div>
+  </div></div>`).join("");
+document.addEventListener("click",e=>{const a=e.target.closest("[data-reason]");if(a){pendingReason=a.dataset.reason;}});
+let pendingReason=null;
+
+$("#principles").innerHTML = PRINCIPLES.map((p,i)=>`<div class="pr"><span class="no">Principle ${i+1}</span><q>${esc(p[0])}</q><p>${esc(p[1])}</p><button class="copy-btn" data-share="${esc(p[0])}">Copy &amp; share</button></div>`).join("");
+$("#ideas").innerHTML = IDEAS.map(t=>`<div class="idea"><p>${esc(t)}</p><button class="copy-btn" data-share="${esc(t)}">Copy &amp; share</button></div>`).join("");
+document.addEventListener("click",e=>{const b=e.target.closest("[data-share]");if(b)copyText(`“${b.dataset.share}” · Satvik Shah, ${CONFIG.SITE}`,"Copied, ready to share");});
+
+function entryHtml(a){
+  const tag=a.href?"a":"div"; const href=a.href?` href="${a.href}"`:"";
+  return `<${tag} class="entry"${href}><span class="when">${esc(a.when)}</span><div><span class="cat">${esc(a.catName)}</span><h3>${esc(a.title)}</h3><p class="sum">${esc(a.sum)}</p></div><span class="rt">${a.rt||"—"}<br><span class="status ${a.status}" style="margin-top:8px">${a.status}</span></span></${tag}>`;
+}
+
+/* ================= ARTICLE ================= */
+(function(){
+  const body=$("#artBody"); const words=body.innerText.trim().split(/\s+/).length;
+  const mins=Math.max(1,Math.round(words/220)); ARTICLES[0].rt=mins+" min";
+  $("#rt").textContent=mins+" min read";
+  $("#toc").innerHTML=$$("h2[id]",body).map(h=>`<button data-to="${h.id}">${esc(h.textContent)}</button>`).join("");
+  $("#toc").addEventListener("click",e=>{const b=e.target.closest("button");if(b)document.getElementById(b.dataset.to).scrollIntoView({behavior:reduced?"auto":"smooth"});});
+  const url=CONFIG.SITE+"#mis-article", t="Before the dashboard: three questions every MIS should answer";
+  $("#shLi").href="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(url);
+  $("#shWa").href="https://wa.me/?text="+encodeURIComponent(t+" by Satvik Shah "+url);
+  $("#shCopy").addEventListener("click",()=>copyText(url,"Link copied"));
+  $("#related").innerHTML=ARTICLES.slice(1,3).map(entryHtml).join("");
+})();
+$("#register-home").innerHTML = ARTICLES.map(entryHtml).join("");
+
+/* Perspectives filter */
+const INTERESTS=[["","All"],["finance","Finance"],["systems","Technology"],["realestate","Real estate"],["risk","Insurance"],["tax","Tax"],["entre","Entrepreneurship"],["people","Leadership"],["beyond","Personal"]];
+let curInt="";
+function renderReg(){
+  const list=ARTICLES.filter(a=>!curInt||a.cat===curInt);
+  $("#register-all").innerHTML = list.length?list.map(entryHtml).join(""):`<div class="empty">Nothing published here yet. <a class="link" href="#connect">Suggest a topic</a></div>`;
+  $$("#interestChips .chip").forEach(c=>c.setAttribute("aria-pressed",String(c.dataset.k===curInt)));
+}
+$("#interestChips").innerHTML=INTERESTS.map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="false">${l}</button>`).join("");
+$("#interestChips").addEventListener("click",e=>{const c=e.target.closest(".chip");if(c){curInt=c.dataset.k;renderReg();}});
+renderReg();
+$("#cats").innerHTML=CATS.map(c=>`<div><b>${esc(c[1])}</b><span>${esc(c[2])}</span></div>`).join("");
+
+/* ================= JOURNAL ================= */
+$("#journal").innerHTML=JOURNAL.map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}<span class="sub">${r[2]}</span></td><td class="lf">${r[3]}</td><td>${r[4]}</td></tr>`).join("");
+
+/* ================= COUNTERS ================= */
+const directorships = V.filter(v=>v.inv==="Director"&&v.status==="Active").length;
+$("#statDir").dataset.to=directorships; $("#statDir").textContent=directorships;
+$("#statOrg").dataset.to=V.length; $("#statOrg").textContent=V.length;
+if(!reduced){$$(".js-count").forEach(el=>{const to=+el.dataset.to,t0=performance.now(),d=1100;(function f(t){const p=Math.min(1,(t-t0)/d);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);})(t0);});}
+
+/* ================= MAP ================= */
+const SVGNS="http://www.w3.org/2000/svg";
+function statusColor(s){return s==="Active"?"var(--ok)":s==="Emerging"?"var(--emerging)":"var(--past)";}
+function drawMap(svg){
+  svg.innerHTML="";
+  const cx=500,cy=350,r1=165,r2=292;
+  const mk=(tag,attrs,parent=svg)=>{const e=document.createElementNS(SVGNS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);parent.appendChild(e);return e;};
+  mk("circle",{cx,cy,r:r1,class:"ring"});mk("circle",{cx,cy,r:r2,class:"ring"});
+  const dpos={};
+  DIMS.forEach((d,i)=>{const a=-Math.PI/2+i*2*Math.PI/DIMS.length;dpos[d.id]={x:cx+r1*Math.cos(a),y:cy+r1*Math.sin(a),a};});
+  // order entities by primary dimension so they sit near their head
+  const ents=[...V].sort((a,b)=>DIMS.findIndex(d=>d.id===a.dims[0])-DIMS.findIndex(d=>d.id===b.dims[0]));
+  const offset=dpos[ents[0].dims[0]].a - Math.PI/DIMS.length*0.9;
+  const epos={};
+  ents.forEach((v,i)=>{const a=offset+i*2*Math.PI/ents.length;epos[v.id]={x:cx+r2*Math.cos(a),y:cy+r2*Math.sin(a),a};});
+  const edges=mk("g",{});
+  DIMS.forEach(d=>mk("line",{x1:cx,y1:cy,x2:dpos[d.id].x,y2:dpos[d.id].y,class:"edge core","data-d":d.id},edges));
+  ents.forEach(v=>v.dims.forEach(dd=>mk("path",{d:`M${dpos[dd].x},${dpos[dd].y} Q${(dpos[dd].x+epos[v.id].x)/2+(cx-(dpos[dd].x+epos[v.id].x)/2)*.15},${(dpos[dd].y+epos[v.id].y)/2+(cy-(dpos[dd].y+epos[v.id].y)/2)*.15} ${epos[v.id].x},${epos[v.id].y}`,class:"edge","data-d":dd,"data-v":v.id},edges)));
+  // entity nodes
+  ents.forEach(v=>{
+    const p=epos[v.id]; const g=mk("g",{class:"node","tabindex":"0",role:"button","aria-label":`${v.name}: ${v.status}. Open details`,"data-v":v.id});
+    mk("circle",{cx:p.x,cy:p.y,r:7.5,fill:statusColor(v.status),stroke:"var(--paper)","stroke-width":2},g);
+    const right=Math.cos(p.a)>=-0.05; const lx=p.x+(right?14:-14);
+    const t=mk("text",{x:lx,y:p.y+4.5,class:"lbl","text-anchor":right?"start":"end"},g); t.textContent=v.short;
+    g.addEventListener("click",()=>openVenture(v.id));
+    g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openVenture(v.id);}});
+    g.addEventListener("mouseenter",()=>hi(svg,v.id,null));g.addEventListener("mouseleave",()=>hi(svg,null,null));
+    g.addEventListener("focus",()=>hi(svg,v.id,null));g.addEventListener("blur",()=>hi(svg,null,null));
+  });
+  // dimension nodes
+  DIMS.forEach(d=>{
+    const p=dpos[d.id]; const g=mk("g",{class:"node dim-node",tabindex:"0",role:"button","aria-label":`${d.name}: show related organisations`});
+    mk("rect",{x:p.x-9,y:p.y-9,width:18,height:18,transform:`rotate(45 ${p.x} ${p.y})`},g);
+    const below=p.y>cy+5, above=p.y<cy-5;
+    const t=mk("text",{x:p.x,y:above?p.y-18:(below?p.y+28:p.y-18),"text-anchor":"middle",class:"dimlbl"},g);
+    t.textContent=d.code.replace("A/c ","")+" · "+d.name.split(" ")[0].replace(",","");
+    const go=()=>{pendingDim=d.id;if(location.hash==="#work"){applyPendingDim();}else location.hash="work";};
+    g.addEventListener("click",go);g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}});
+    g.addEventListener("mouseenter",()=>hi(svg,null,d.id));g.addEventListener("mouseleave",()=>hi(svg,null,null));
+  });
+  const c=mk("g",{class:"center"});
+  mk("rect",{x:cx-82,y:cy-26,width:164,height:52},c);
+  const ct=mk("text",{x:cx,y:cy+7,"text-anchor":"middle"},c);ct.textContent="Satvik Shah";
+}
+function hi(svg,vid,did){
+  $$(".edge",svg).forEach(e=>{const on=(vid&&e.dataset.v===vid)||(did&&e.dataset.d===did&&!e.classList.contains("core"));e.classList.toggle("hi",!!on);});
+}
+drawMap($("#map-home"));
+
+/* ================= WORK PAGE ================= */
+$("#fDim").innerHTML+=DIMS.map(d=>`<option value="${d.id}">${esc(d.name)}</option>`).join("");
+$("#fInv").innerHTML+=[...new Set(V.map(v=>v.inv))].map(i=>`<option>${esc(i)}</option>`).join("");
+function filtered(){const d=$("#fDim").value,i=$("#fInv").value,s=$("#fSt").value;return V.filter(v=>(!d||v.dims.includes(d))&&(!i||v.inv===i)&&(!s||v.status===s));}
+function vSocial(v){return SOCIAL.filter(x=>["linkedin","instagram","facebook","youtube"].includes(x.key)).map(s=>{const u=v.social&&v.social[s.key];return u?`<a class="soc" href="${esc(u)}" target="_blank" rel="noopener" aria-label="${esc(v.short)} on ${s.label}">${s.abbr}</a>`:`<span class="soc missing" title="${esc(v.short)} ${s.label} page: link to add">${s.abbr}</span>`;}).join("");}
+function renderWork(){
+  const list=filtered();
+  $("#vCount").textContent=`${list.length} of ${V.length} entries`;
+  $("#vCardsWrap").innerHTML=list.length?list.map(v=>`<article class="v"><header><div class="logo-slot" aria-hidden="true">${v.ini}</div><div><h3>${esc(v.name)}</h3><p class="dom">${esc(v.domain)}</p></div></header>
+    <dl><div><dt>Capacity</dt><dd>${v.cap}</dd></div><div><dt>Since</dt><dd class="mono">${v.since}</dd></div><div><dt>Area</dt><dd>${v.dims.map(d=>esc(dimById(d).name)).join("; ")}</dd></div><div><dt>Status</dt><dd><span class="status ${v.status}">${v.status}</span></dd></div></dl>
+    <footer><div class="vs">${vSocial(v)}</div><div class="btns" style="gap:8px">${v.url?`<a class="btn ghost small" href="${esc(v.url)}" target="_blank" rel="noopener">Website ↗</a>`:""}<button class="btn primary small" data-open="${v.id}">Details</button></div></footer></article>`).join("")
+    :`<div class="empty">No entries match these filters.</div>`;
+  $("#vListWrap").innerHTML=list.map(v=>`<button data-open="${v.id}"><span><b style="color:var(--ink)">${esc(v.name)}</b><br><span class="muted" style="font-size:.9rem">${v.cap} · ${v.since}</span></span><span class="status ${v.status}">${v.status}</span></button>`).join("");
+}
+["#fDim","#fInv","#fSt"].forEach(s=>$(s).addEventListener("change",renderWork));
+function setView(which){
+  [["vCards","vCardsWrap"],["vMap","vMapWrap"],["vList","vListWrap"]].forEach(([b,w])=>{const on=b===which;$("#"+b).setAttribute("aria-pressed",String(on));$("#"+w).hidden=!on;});
+  if(which==="vMap")drawMap($("#map-work"));
+}
+["vCards","vMap","vList"].forEach(b=>$("#"+b).addEventListener("click",()=>setView(b)));
+document.addEventListener("click",e=>{const b=e.target.closest("[data-open]");if(b)openVenture(b.dataset.open);});
+function applyPendingDim(){if(pendingDim){$("#fDim").value=pendingDim;$("#fSt").value="";$("#fInv").value="";pendingDim=null;setView("vCards");renderWork();}}
+renderWork();
+
+/* dialog */
+const dlg=$("#dlg");
+function openVenture(id){
+  const v=V.find(x=>x.id===id); if(!v)return;
+  $("#dlgEyebrow").innerHTML=`<span class="status ${v.status}">${v.status}</span> &nbsp;${esc(v.domain)}`;
+  $("#dlgTitle").textContent=v.name;
+  const kv=(k,val)=>`<div class="kv"><span>${k}</span><span>${val}</span></div>`;
+  $("#dlgBody").innerHTML=`<p>${v.what}</p>`+kv("My capacity",v.cap)+kv("Involvement",esc(v.inv))+kv("Period",v.since)+kv("Area of work",v.dims.map(d=>esc(dimById(d).name)).join("<br>"))+kv("My focus",v.contrib)+kv("Social pages",`<span style="display:flex;gap:4px;flex-wrap:wrap">${vSocial(v)}</span>`)+
+    `<div class="btns">${v.url?`<a class="btn ghost small" href="${esc(v.url)}" target="_blank" rel="noopener">Official website ↗</a>`:""}<a class="btn primary small" href="#connect" id="dlgConnect">Talk to me about this</a></div>`;
+  $("#dlgConnect").addEventListener("click",()=>dlg.close());
+  if(typeof dlg.showModal==="function")dlg.showModal();else dlg.setAttribute("open","");
+}
+$("#dlgClose").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close();});
+
+/* ================= CONNECT FORM ================= */
+$("#reasons").innerHTML=REASONS.map(([k,l])=>`<label><input type="radio" name="reason" value="${k}" id="r-${k}"><span>${l}</span></label>`).join("");
+function updateCond(){
+  const r=($("input[name=reason]:checked")||{}).value||"";
+  $$(".cond").forEach(c=>c.hidden=!c.dataset.show.split(" ").includes(r));
+}
+$("#reasons").addEventListener("change",updateCond);
+function setReason(k){const el=$("#r-"+k);if(el){el.checked=true;updateCond();}}
+const form=$("#cf");
+form.addEventListener("submit",async e=>{
+  e.preventDefault();
+  const f=new FormData(form); let ok=true;
+  const err=(id,m)=>{$("#e-"+id).textContent=m;if(m)ok=false;};
+  err("reason",f.get("reason")?"":"Choose what you would like to talk about.");
+  err("name",(f.get("name")||"").trim()?"":"Please add your name.");
+  err("email",/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.get("email")||"")?"":"Please enter a valid email, like name@company.com.");
+  err("msg",(f.get("message")||"").trim().length>=10?"":"Add a line or two so I can understand your request.");
+  err("consent",f.get("consent")?"":"Please tick the consent box so I can reply.");
+  if(!ok){const first=$$(".err").find(x=>x.textContent);if(first)first.scrollIntoView({block:"center",behavior:reduced?"auto":"smooth"});return;}
+  if(f.get("bot-field"))return;
+  const reasonLabel=(REASONS.find(r=>r[0]===f.get("reason"))||["",""])[1];
+  const lines=[`Topic: ${reasonLabel}`,`Name: ${f.get("name")}`,`Email: ${f.get("email")}`];
+  [["phone","Phone"],["linkedin","LinkedIn"],["organisation","Organisation"],["role","Role"],["property_need","Property question"],["property_location","Property location"],["event_date","Event date"],["event_audience","Audience"],["career_stage","Stage"]].forEach(([k,l])=>{const v=(f.get(k)||"").trim();const c=form.elements[k];if(v&&c&&!c.closest(".cond[hidden]"))lines.push(`${l}: ${v}`);});
+  lines.push("",String(f.get("message")).trim());
+  const summary=lines.join("\n");
+  const res=$("#cfResult");
+  if(isLive()){
+    try{
+      const payload={_subject:`Website enquiry: ${reasonLabel} · ${f.get("name")}`,_template:"table",_replyto:f.get("email"),_honey:""};
+      lines.forEach(l=>{const i=l.indexOf(": ");if(i>0)payload[l.slice(0,i)]=l.slice(i+2);});payload.Message=String(f.get("message")).trim();
+      const r=await fetch(CONFIG.FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(payload)});
+      if(!r.ok)throw new Error();
+      res.innerHTML=`<h3>Thank you, ${esc(f.get("name"))}.</h3><p>Your message has been received. I read every note personally and reply where I can be genuinely useful.</p>`;
+      form.hidden=true;res.hidden=false;res.focus();return;
+    }catch(_){res.innerHTML=`<h3>The message did not go through.</h3><p>Please try again, or send it on WhatsApp instead.</p><div class="btns"><a class="btn primary small" target="_blank" rel="noopener" href="${waLink(summary)}">Send on WhatsApp</a></div>`;res.hidden=false;return;}
+  }
+  res.innerHTML=`<h3>Your message is ready.</h3><p>This preview cannot deliver messages yet. Once the site is live, the form sends directly. For now, send it on WhatsApp or copy it into an email to <b>${esc(CONFIG.EMAIL)}</b>.</p><pre id="sumText">${esc(summary)}</pre>
+   <div class="btns"><a class="btn primary small" target="_blank" rel="noopener" href="${waLink(summary)}">Send on WhatsApp</a><button class="btn ghost small" id="copySum">Copy message</button><button class="btn ghost small" id="editMsg">Edit</button></div>`;
+  form.hidden=true;res.hidden=false;res.focus();
+  $("#copySum").addEventListener("click",()=>copyText(summary,"Message copied"));
+  $("#editMsg").addEventListener("click",()=>{form.hidden=false;res.hidden=true;});
+});
+
+/* vCard */
+const VCARD=["BEGIN:VCARD","VERSION:3.0","N:Shah;Satvik;;CA;","FN:CA Satvik Shah","ORG:JS Assignments Private Limited","TITLE:Director","TEL;TYPE=CELL:+919898012617",`EMAIL;TYPE=WORK:${CONFIG.EMAIL}`,"ADR;TYPE=WORK:;;501\\, Ocean\\, beside Centre Square Mall\\, Sarabhai Compound\\, Vadi Wadi;Vadodara;Gujarat;391101;India",`URL:${CONFIG.SITE}`,"NOTE:Chartered Accountant · Vadodara","END:VCARD"].join("\r\n");
+$("#vcardBtn").addEventListener("click",()=>{
+  if(isLive()){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([VCARD],{type:"text/vcard"}));a.download="Satvik-Shah.vcf";document.body.appendChild(a);a.click();a.remove();toast("Contact card downloaded");return;}
+  const m=$("#vcardMsg");m.hidden=false;m.textContent="The contact card downloads on the live site. In this preview, copy the email and number above.";
+});
+
+/* copy buttons */
+document.addEventListener("click",e=>{const b=e.target.closest("[data-copy]");if(b){const t=$(b.dataset.copy);if(t)copyText(t.textContent.trim(),"Copied");}});
+
+/* ================= ROUTER ================= */
+const pages=$$(".page"); const routes=pages.map(p=>p.dataset.route);
+function route(){
+  let r=location.hash.slice(1)||"home"; if(!routes.includes(r))r="home";
+  pages.forEach(p=>p.hidden=p.dataset.route!==r);
+  const pg=pages.find(p=>p.dataset.route===r);
+  document.title=pg.dataset.title||"Satvik Shah";
+  $$(".nav a").forEach(a=>{const on=a.dataset.r===r||(r==="mis-article"&&a.dataset.r==="perspectives");if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  $("#nav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");
+  window.scrollTo(0,0);
+  if(r==="work")applyPendingDim();
+  if(r==="connect"&&pendingReason){setReason(pendingReason);pendingReason=null;}
+  if(location.hash){const h=pg.querySelector("h1");if(h){h.setAttribute("tabindex","-1");h.focus({preventScroll:true});}}
+  armReveal(pg);
+}
+window.addEventListener("hashchange",route);
+$("#menuBtn").addEventListener("click",()=>{const n=$("#nav");const o=n.classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",String(o));});
+function closeMenu(focusBtn){const n=$("#nav");if(!n.classList.contains("open"))return;n.classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");if(focusBtn)$("#menuBtn").focus();}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu(true);});
+document.addEventListener("click",e=>{if(!e.target.closest(".top"))closeMenu(false);});
+$("#nav").addEventListener("click",e=>{if(e.target.closest("a"))closeMenu(false);});
+matchMedia("(min-width:901px)").addEventListener("change",e=>{if(e.matches)closeMenu(false);});
+
+/* reveal: visible at rest; small lift only for items below the fold */
+let io=null;
+function armReveal(scope){
+  if(reduced||!("IntersectionObserver" in window))return;
+  if(!io)io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.remove("pre");io.unobserve(en.target);}}),{rootMargin:"0px 0px -8% 0px"});
+  $$(".sec-head,.acct,.pr,.entry,.way,.v,.idea,.practice",scope).forEach(el=>{
+    el.classList.add("rv");
+    if(el.getBoundingClientRect().top>innerHeight){el.classList.add("pre");io.observe(el);}
+  });
+}
+
+/* editor notes */
+const nt=$("#notesToggle");
+function setNotes(on){document.body.classList.toggle("notes-off",!on);nt.setAttribute("aria-pressed",String(on));nt.textContent=on?"Editor notes · on":"Editor notes · off";nt.title=on?"Highlighted items need your input. Click to preview the clean site.":"Click to show items that need your input";try{localStorage.setItem("ss-notes",on?"1":"0");}catch(e){}}
+nt.addEventListener("click",()=>setNotes(document.body.classList.contains("notes-off")));
+let notesPref="1";try{notesPref=localStorage.getItem("ss-notes")||"1";}catch(e){}
+setNotes(notesPref!=="0");
+
+route();
+})();
+</script>
+
+</body>
+</html>
+<script async src="/.netlify/scripts/ar" data-netlify-deploy-id="6af8aea2ffa036efa19b6dfc" data-netlify-site-id="53f714fa-a61d-4f21-9e43-96fb5c1b4082" data-agent-runner-id="6af8ab6b4df17c024f57e5ca"></script>
