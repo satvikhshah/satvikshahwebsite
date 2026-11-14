@@ -1,0 +1,55 @@
+# Blog admin for satvikshah.com (Decap CMS)
+# Posts are saved as Markdown files in content/blog/ of the GitHub repository.
+# Every save commits to the main branch; Netlify then rebuilds and publishes the site automatically.
+
+backend:
+  name: github
+  repo: satvikhshah/satvikshahwebsite
+  branch: main
+  base_url: https://api.netlify.com
+  commit_messages:
+    create: "Blog: add post “{{slug}}”"
+    update: "Blog: update post “{{slug}}”"
+    delete: "Blog: delete post “{{slug}}”"
+    uploadMedia: "Blog: upload image “{{path}}”"
+    deleteMedia: "Blog: delete image “{{path}}”"
+
+site_url: https://satvikshah.com
+display_url: https://satvikshah.com/blog/
+logo_url: https://satvikshah.com/apple-touch-icon.png
+
+media_folder: img/blog
+public_folder: /img/blog
+
+collections:
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    preview_path: "blog/{{slug}}/"
+    sortable_fields: ["date", "title"]
+    summary: "{{title}}  ·  {{date | date('DD MMM YYYY')}}  ·  {{draft | ternary('DRAFT', 'Published')}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime", date_format: "DD MMM YYYY", time_format: false, format: "YYYY-MM-DD" }
+      - label: "Topic"
+        name: "category"
+        widget: "select"
+        default: "finance"
+        options:
+          - { label: "Finance & Decision Making", value: "finance" }
+          - { label: "Taxation, Compliance & Governance", value: "tax" }
+          - { label: "Systems, Technology & Automation", value: "systems" }
+          - { label: "Entrepreneurship & Business Building", value: "entre" }
+          - { label: "Risk, Insurance & Financial Security", value: "risk" }
+          - { label: "Real Estate & Property", value: "realestate" }
+          - { label: "Leadership & People", value: "people" }
+          - { label: "Beyond Business", value: "beyond" }
+          - { label: "Ideas in Progress", value: "ideas" }
+      - { label: "Summary (one or two sentences shown in lists and on social media)", name: "summary", widget: "text" }
+      - { label: "Cover image (optional)", name: "cover", widget: "image", required: false }
+      - { label: "Draft (tick to keep it hidden from the website)", name: "draft", widget: "boolean", default: false }
+      - { label: "Article", name: "body", widget: "markdown" }
+      - { label: "Note to self (never shown on the website)", name: "review_note", widget: "text", required: false }

@@ -1,7 +1,8 @@
 # Netlify settings for satvikshah.com
-# Static site: no build step. Netlify publishes the files in this folder as they are.
+# The build step turns Markdown blog posts (content/blog) into pages and writes everything to dist/.
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
 
 # Send anyone who opens the Netlify address to the real domain.
 [[redirects]]
@@ -22,3 +23,8 @@
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
