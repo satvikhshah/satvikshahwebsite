@@ -36,3 +36,8 @@ Edit on GitHub (pencil icon on the file), commit to `main`, and Netlify publishe
 ## Contact form
 
 Enquiries are sent to satvikshah@jsassignments.com through FormSubmit. The first enquiry after launch triggers a one-time activation email from FormSubmit; click "Activate Form" in it.
+
+## Deploys
+
+This repository is public so that Netlify's free plan builds every commit automatically.
+It contains only the website's own files, the same ones any visitor's browser downloads.
